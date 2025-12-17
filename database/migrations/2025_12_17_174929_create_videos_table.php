@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('course_id')->constrained()->cascadeOnDelete();
             $table->string('source')->default('youtube');
             $table->string('title');
+            $table->string('slug')->unique();
             $table->string('youtube_url');
             $table->string('thumbnail_url')->nullable();
             $table->longText('body')->nullable();

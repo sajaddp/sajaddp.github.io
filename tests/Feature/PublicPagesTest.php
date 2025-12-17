@@ -86,9 +86,10 @@ it('returns a valid sitemap with public urls', function () {
     $response = $this->get(route('sitemap'));
 
     $response->assertSuccessful()
-        ->assertHeaderContains('Content-Type', 'application/xml')
         ->assertSee(route('home'))
         ->assertSee(route('videos.index'))
         ->assertSee(route('courses.show', $course))
         ->assertSee(route('videos.show', $video));
+
+    expect($response->headers->get('Content-Type'))->toContain('application/xml');
 });

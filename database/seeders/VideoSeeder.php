@@ -19,9 +19,9 @@ class VideoSeeder extends Seeder
             $courses = Course::factory()->count(2)->create();
         }
 
-        $courses->each(function (Course $course): void {
-            Video::factory()->count(3)->create([
-                'course_id' => $course->id,
+        collect(range(1, 10))->each(function () use ($courses): void {
+            Video::factory()->create([
+                'course_id' => $courses->random()->id,
             ]);
         });
     }
