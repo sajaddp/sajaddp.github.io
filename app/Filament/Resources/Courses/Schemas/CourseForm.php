@@ -13,14 +13,20 @@ class CourseForm
     {
         return $schema
             ->components([
-                Section::make('Course details')
+                Section::make('جزئیات دوره')
                     ->schema([
                         TextInput::make('title')
+                            ->label('عنوان')
                             ->required()
                             ->maxLength(160),
                         Textarea::make('description')
+                            ->label('توضیحات')
                             ->columnSpanFull()
                             ->rows(4),
+                        Textarea::make('body')
+                            ->label('متن صفحه')
+                            ->columnSpanFull()
+                            ->rows(8),
                     ])
                     ->columns(2),
             ]);

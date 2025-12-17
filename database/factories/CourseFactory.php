@@ -19,6 +19,7 @@ class CourseFactory extends Factory
         return [
             'title' => fake()->sentence(3),
             'description' => fake()->paragraph(),
+            'body' => fake()->paragraphs(3, true),
         ];
     }
 }

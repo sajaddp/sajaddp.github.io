@@ -24,7 +24,13 @@ class VideoResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
-    protected static string|UnitEnum|null $navigationGroup = 'Content';
+    protected static string|UnitEnum|null $navigationGroup = 'مدیریت محتوا';
+
+    protected static ?string $navigationLabel = 'ویدیوها';
+
+    protected static ?string $modelLabel = 'ویدیو';
+
+    protected static ?string $pluralModelLabel = 'ویدیوها';
 
     public static function getEloquentQuery(): Builder
     {

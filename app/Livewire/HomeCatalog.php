@@ -12,10 +12,12 @@ class HomeCatalog extends Component
      *     id: int,
      *     title: string,
      *     description: string|null,
+     *     body: string|null,
      *     videos: list<array{
      *         id: int,
      *         title: string,
-     *         youtube_url: string,
+     *         source: string,
+     *         url: string,
      *         thumbnail_url: string|null
      *     }>
      * }>

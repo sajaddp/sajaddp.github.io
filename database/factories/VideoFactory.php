@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\VideoSource;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,9 +19,12 @@ class VideoFactory extends Factory
     {
         return [
             'course_id' => \App\Models\Course::factory(),
+            'source' => fake()->randomElement(VideoSource::cases()),
             'title' => fake()->sentence(4),
             'youtube_url' => fake()->url(),
             'thumbnail_url' => fake()->imageUrl(1280, 720, 'education'),
+            'body' => fake()->paragraphs(2, true),
+            'attachment_path' => null,
         ];
     }
 }

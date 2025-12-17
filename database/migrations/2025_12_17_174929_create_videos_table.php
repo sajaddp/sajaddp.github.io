@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
             $table->foreignId('course_id')->constrained()->cascadeOnDelete();
+            $table->string('source')->default('youtube');
             $table->string('title');
             $table->string('youtube_url');
             $table->string('thumbnail_url')->nullable();
+            $table->longText('body')->nullable();
+            $table->string('attachment_path')->nullable();
             $table->timestamps();
         });
     }

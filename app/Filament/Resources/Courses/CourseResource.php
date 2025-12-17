@@ -23,7 +23,13 @@ class CourseResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
-    protected static string|UnitEnum|null $navigationGroup = 'Content';
+    protected static string|UnitEnum|null $navigationGroup = 'مدیریت محتوا';
+
+    protected static ?string $navigationLabel = 'دوره ها';
+
+    protected static ?string $modelLabel = 'دوره';
+
+    protected static ?string $pluralModelLabel = 'دوره ها';
 
     public static function form(Schema $schema): Schema
     {

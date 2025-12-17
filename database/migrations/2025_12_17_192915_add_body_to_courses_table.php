@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('courses', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->text('description')->nullable();
+        if (Schema::hasColumn('courses', 'body')) {
+            return;
+        }
+
+        Schema::table('courses', function (Blueprint $table) {
             $table->longText('body')->nullable();
-            $table->timestamps();
         });
     }
 
@@ -25,6 +25,12 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('courses');
+        if (! Schema::hasColumn('courses', 'body')) {
+            return;
+        }
+
+        Schema::table('courses', function (Blueprint $table) {
+            $table->dropColumn('body');
+        });
     }
 };
