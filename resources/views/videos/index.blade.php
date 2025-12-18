@@ -49,8 +49,8 @@
                     <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                         <div class="flex flex-col gap-4">
                             <p class="text-xs font-semibold uppercase tracking-[0.32em] text-emerald-700">آرشیو کامل ویدیوها</p>
-                            <h1 class="text-4xl font-bold leading-tight text-slate-950 sm:text-5xl">گالری ویدیوها به سبک Laracasts.</h1>
-                            <p class="max-w-3xl text-sm leading-relaxed text-slate-600">از همین صفحه همه ویدیوها را ببین، وارد صفحه اختصاصی هر ویدیو شو و منبع اصلی را هم پیدا کن.</p>
+                            <h1 class="text-4xl font-bold leading-tight text-slate-950 sm:text-5xl">گالری آموزش‌های ویدیویی، الهام گرفته از Laracasts.</h1>
+                            <p class="max-w-3xl text-sm leading-relaxed text-slate-600">همه ویدیوها در یک نما: پیش‌نمایش، ارتباط با دوره مادر، صفحه اختصاصی و لینک منبع اصلی.</p>
                             <div class="flex flex-wrap items-center gap-3 pt-2">
                                 <a class="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-3 text-sm font-bold text-white shadow-[0_10px_40px_rgba(16,185,129,0.4)] transition hover:-translate-y-0.5 hover:shadow-[0_12px_48px_rgba(16,185,129,0.5)]" href="{{ route('courses.index') }}">
                                     مشاهده دوره ها
