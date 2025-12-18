@@ -34,6 +34,18 @@ it('renders the videos index with links to video pages', function () {
         ->assertSee($video->title);
 });
 
+it('renders the courses index with links to course pages', function () {
+    $course = Course::factory()->create([
+        'title' => 'دوره طراحی',
+    ]);
+
+    $response = $this->get(route('courses.index'));
+
+    $response->assertSuccessful()
+        ->assertSee(route('courses.show', $course))
+        ->assertSee($course->title);
+});
+
 it('renders the video page with an embed for youtube', function () {
     $video = Video::factory()->create([
         'source' => VideoSource::Youtube,
@@ -87,6 +99,7 @@ it('returns a valid sitemap with public urls', function () {
 
     $response->assertSuccessful()
         ->assertSee(route('home'))
+        ->assertSee(route('courses.index'))
         ->assertSee(route('videos.index'))
         ->assertSee(route('courses.show', $course))
         ->assertSee(route('videos.show', $video));

@@ -12,6 +12,7 @@ class VideosIndex extends Component
      * @var list<array{
      *     id: int,
      *     title: string,
+     *     slug: string,
      *     source: string,
      *     url: string,
      *     thumbnail_url: string|null,

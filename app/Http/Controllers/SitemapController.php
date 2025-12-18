@@ -25,6 +25,12 @@ class SitemapController extends Controller
                 'priority' => '1.0',
             ],
             [
+                'loc' => route('courses.index'),
+                'lastmod' => $lastModified,
+                'changefreq' => 'daily',
+                'priority' => '0.9',
+            ],
+            [
                 'loc' => route('videos.index'),
                 'lastmod' => $lastModified,
                 'changefreq' => 'daily',

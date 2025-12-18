@@ -46,7 +46,7 @@
                         @if (!empty($course))
                             <p class="text-sm text-slate-600">
                                 مربوط به دوره:
-                                <a class="font-semibold text-amber-700 hover:text-amber-800" href="{{ route('courses.show', $course['id']) }}">
+                                <a class="font-semibold text-amber-700 hover:text-amber-800" href="{{ route('courses.show', $course['slug']) }}">
                                     {{ $course['title'] }}
                                 </a>
                             </p>

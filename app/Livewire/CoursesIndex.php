@@ -2,10 +2,11 @@
 
 namespace App\Livewire;
 
+use App\Services\VideoCatalogService;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
-class HomeCatalog extends Component
+class CoursesIndex extends Component
 {
     /**
      * @var list<array{
@@ -14,20 +15,18 @@ class HomeCatalog extends Component
      *     slug: string,
      *     description: string|null,
      *     body: string|null,
-     *     videos: list<array{
-     *         id: int,
-     *         title: string,
-     *         slug: string,
-     *         source: string,
-     *         url: string,
-     *         thumbnail_url: string|null
-     *     }>
+     *     videos_count: int
      * }>
      */
     public array $courses = [];
 
+    public function mount(VideoCatalogService $videoCatalogService): void
+    {
+        $this->courses = $videoCatalogService->getAllCourses();
+    }
+
     public function render(): View
     {
-        return view('livewire.home-catalog');
+        return view('livewire.courses-index');
     }
 }

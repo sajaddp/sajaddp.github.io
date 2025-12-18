@@ -16,11 +16,13 @@ class VideoCatalogService
      *     courses: list<array{
      *         id: int,
      *         title: string,
+     *         slug: string,
      *         description: string|null,
      *         body: string|null,
      *         videos: list<array{
      *             id: int,
      *             title: string,
+     *             slug: string,
      *             source: string,
      *             url: string,
      *             thumbnail_url: string|null
@@ -48,6 +50,7 @@ class VideoCatalogService
      *     video: array{
      *         id: int,
      *         title: string,
+     *         slug: string,
      *         source: string,
      *         url: string,
      *         embed_url: string|null,
@@ -58,6 +61,7 @@ class VideoCatalogService
      *     course: array{
      *         id: int,
      *         title: string
+     *         slug: string
      *     }|null
      * }
      */
@@ -69,6 +73,7 @@ class VideoCatalogService
             'video' => [
                 'id' => $video->id,
                 'title' => $video->title,
+                'slug' => $video->slug,
                 'source' => ($video->source ?? VideoSource::Other)->value,
                 'url' => $video->youtube_url,
                 'embed_url' => $this->resolveEmbedUrl($video),
@@ -80,6 +85,7 @@ class VideoCatalogService
                 ? [
                     'id' => $video->course->id,
                     'title' => $video->course->title,
+                    'slug' => $video->course->slug,
                 ]
                 : null,
         ];
@@ -90,6 +96,7 @@ class VideoCatalogService
      *     course: array{
      *         id: int,
      *         title: string,
+     *         slug: string,
      *         description: string|null,
      *         body: string|null
      *     },
@@ -112,6 +119,7 @@ class VideoCatalogService
             'course' => [
                 'id' => $course->id,
                 'title' => $course->title,
+                'slug' => $course->slug,
                 'description' => $course->description,
                 'body' => $course->body,
             ],
@@ -127,6 +135,36 @@ class VideoCatalogService
      * @return list<array{
      *     id: int,
      *     title: string,
+     *     slug: string,
+     *     description: string|null,
+     *     body: string|null,
+     *     videos_count: int
+     * }>
+     */
+    public function getAllCourses(): array
+    {
+        return Course::query()
+            ->withCount('videos')
+            ->latest()
+            ->get()
+            ->map(function (Course $course): array {
+                return [
+                    'id' => $course->id,
+                    'title' => $course->title,
+                    'slug' => $course->slug,
+                    'description' => $course->description,
+                    'body' => $course->body,
+                    'videos_count' => $course->videos_count,
+                ];
+            })
+            ->all();
+    }
+
+    /**
+     * @return list<array{
+     *     id: int,
+     *     title: string,
+     *     slug: string,
      *     source: string,
      *     url: string,
      *     thumbnail_url: string|null,
@@ -145,6 +183,8 @@ class VideoCatalogService
             ->map(function (Video $video): array {
                 return $this->mapVideo($video);
             })
+            ->unique('id')
+            ->values()
             ->all();
     }
 
@@ -156,7 +196,7 @@ class VideoCatalogService
         return Course::query()
             ->with([
                 'videos' => function ($query) {
-                    $query->latest();
+                    $query->latest()->limit(3);
                 },
             ])
             ->latest()
@@ -212,6 +252,7 @@ class VideoCatalogService
      * @return array{
      *     id: int,
      *     title: string,
+     *     slug: string,
      *     description: string|null,
      *     body: string|null,
      *     videos: list<array{
@@ -228,6 +269,7 @@ class VideoCatalogService
         return [
             'id' => $course->id,
             'title' => $course->title,
+            'slug' => $course->slug,
             'description' => $course->description,
             'body' => $course->body,
             'videos' => $course->videos
@@ -242,6 +284,7 @@ class VideoCatalogService
      * @return array{
      *     id: int,
      *     title: string,
+     *     slug: string,
      *     source: string,
      *     url: string,
      *     thumbnail_url: string|null,
@@ -256,6 +299,7 @@ class VideoCatalogService
         $payload = [
             'id' => $video->id,
             'title' => $video->title,
+            'slug' => $video->slug,
             'source' => ($video->source ?? VideoSource::Other)->value,
             'url' => $video->youtube_url,
             'thumbnail_url' => $video->thumbnail_url,
@@ -266,6 +310,7 @@ class VideoCatalogService
                 ? [
                     'id' => $video->course->id,
                     'title' => $video->course->title,
+                    'slug' => $video->course->slug,
                 ]
                 : null;
         }

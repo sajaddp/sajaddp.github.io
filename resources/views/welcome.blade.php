@@ -36,6 +36,10 @@
                             </div>
                         </div>
                         <div class="flex flex-wrap items-center gap-3">
+                            <a class="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 px-4 py-2 text-sm font-medium text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-900/20 hover:bg-white" href="{{ route('courses.index') }}">
+                                مشاهده همه دوره ها
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
                             <a class="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 px-4 py-2 text-sm font-medium text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-900/20 hover:bg-white" href="{{ route('videos.index') }}">
                                 مشاهده همه ویدیوها
                                 <span aria-hidden="true">&rarr;</span>

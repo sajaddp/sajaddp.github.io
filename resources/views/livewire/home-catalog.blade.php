@@ -9,7 +9,7 @@
             <article class="rounded-3xl border border-slate-900/10 bg-white/70 p-6 shadow-sm backdrop-blur" wire:key="course-{{ $course['id'] }}">
                 <div class="flex flex-wrap items-start justify-between gap-4">
                     <div class="flex flex-col gap-2">
-                        <a class="text-xl font-semibold text-slate-900 hover:text-amber-700" href="{{ route('courses.show', $course['id']) }}">
+                        <a class="text-xl font-semibold text-slate-900 hover:text-amber-700" href="{{ route('courses.show', $course['slug']) }}">
                             {{ $course['title'] }}
                         </a>
                         @if (!empty($course['description']))
