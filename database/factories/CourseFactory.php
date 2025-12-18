@@ -16,10 +16,12 @@ class CourseFactory extends Factory
      */
     public function definition(): array
     {
+        $faker = fake('fa_IR');
+
         return [
-            'title' => fake()->sentence(3),
-            'description' => fake()->paragraph(),
-            'body' => fake()->paragraphs(3, true),
+            'title' => $faker->sentence(3),
+            'description' => $faker->paragraph(),
+            'body' => $faker->paragraphs(3, true),
         ];
     }
 }
