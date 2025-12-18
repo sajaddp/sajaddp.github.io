@@ -13,16 +13,16 @@
         ->take(6);
 @endphp
 
-<section class="flex flex-col gap-12">
+<section class="flex flex-col gap-14">
     <div class="flex flex-col gap-3">
         <p class="text-xs font-semibold uppercase tracking-[0.32em] text-emerald-700">شبکه دوره ها</p>
         <h2 class="text-3xl font-bold text-slate-900">مسیرهای یادگیری منظم، مشابه تجربه Laracasts.</h2>
-        <p class="max-w-3xl text-sm leading-relaxed text-slate-600">هر دوره با داستان منسجم و پیش نمایش اپیزودهای تازه منتشر شده ارائه می‌شود.</p>
+        <p class="max-w-3xl text-sm leading-relaxed text-slate-600">هر دوره با داستان منسجم و پیش‌نمایش اپیزودهای تازه منتشر شده ارائه می‌شود.</p>
     </div>
 
     <div class="grid gap-6">
         @forelse ($courses as $course)
-            <article class="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg" wire:key="course-{{ $course['id'] }}">
+            <article class="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl" wire:key="course-{{ $course['id'] }}">
                 <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-50 via-transparent to-white opacity-0 transition duration-300 group-hover:opacity-100"></div>
                 <div class="relative flex flex-col gap-4">
                     <div class="flex flex-wrap items-start justify-between gap-4">
@@ -39,10 +39,13 @@
                                 <p class="max-w-3xl text-sm leading-relaxed text-slate-600">{{ $course['description'] }}</p>
                             @endif
                         </div>
-                        <a class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-900 transition hover:border-emerald-200 hover:text-emerald-700" href="{{ route('courses.show', $course['slug']) }}">
-                            مشاهده دوره
-                            <span aria-hidden="true">&rarr;</span>
-                        </a>
+                        <div class="flex items-center gap-3">
+                            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700 ring-1 ring-slate-200">مسیر کامل</span>
+                            <a class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-900 transition hover:border-emerald-200 hover:text-emerald-700" href="{{ route('courses.show', $course['slug']) }}">
+                                مشاهده دوره
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -66,7 +69,7 @@
                 </div>
             </article>
         @empty
-            <div class="rounded-3xl border border-dashed border-white/15 bg-white/5 p-10 text-center text-sm text-slate-300">
+            <div class="rounded-3xl border border-dashed border-slate-200 bg-white p-10 text-center text-sm text-slate-500">
                 هنوز دوره ای اضافه نشده است. اولین دوره و ویدیوها را از پنل ادمین بساز.
             </div>
         @endforelse
@@ -85,7 +88,7 @@
     @else
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($latestVideos as $video)
-                <a class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" href="{{ route('videos.show', $video['slug']) }}" wire:key="latest-video-{{ $video['id'] }}">
+                <a class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl" href="{{ route('videos.show', $video['slug']) }}" wire:key="latest-video-{{ $video['id'] }}">
                     <div class="relative aspect-video w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
                         @if (!empty($video['thumbnail_url']))
                             <img class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]" src="{{ $video['thumbnail_url'] }}" alt="{{ $video['title'] }} thumbnail">

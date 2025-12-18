@@ -1,4 +1,4 @@
-<section class="flex flex-col gap-10">
+<section class="flex flex-col gap-12">
     <div class="flex flex-col gap-2">
         <h2 class="text-2xl font-bold text-slate-900">همه ویدیوها</h2>
         <p class="text-sm text-slate-600">تمام ویدیوهای منتشر شده را یکجا ببین.</p>
@@ -9,10 +9,10 @@
             هنوز ویدیویی اضافه نشده است.
         </div>
     @else
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($videos as $video)
-                <a class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-cyan-200 hover:shadow-lg" href="{{ route('videos.show', $video['slug']) }}" wire:key="public-video-{{ $video['id'] }}">
-                    <div class="relative aspect-video w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
+                <a class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-xl transition hover:-translate-y-1 hover:border-cyan-200 hover:shadow-2xl" href="{{ route('videos.show', $video['slug']) }}" wire:key="public-video-{{ $video['id'] }}">
+                    <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-gradient-to-br from-slate-100 to-slate-200">
                         @if (!empty($video['thumbnail_url']))
                             <img class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]" src="{{ $video['thumbnail_url'] }}" alt="{{ $video['title'] }} thumbnail">
                         @else
@@ -22,17 +22,23 @@
                             {{ $video['source'] === 'aparat' ? 'Aparat' : 'YouTube' }}
                         </span>
                     </div>
-                    <div class="flex flex-1 flex-col gap-2 p-4">
+                    <div class="flex flex-1 flex-col gap-3 pt-4">
                         <p class="text-base font-semibold text-slate-900">{{ $video['title'] }}</p>
                         @if (!empty($video['course']))
-                            <a class="text-xs font-semibold text-emerald-700 transition hover:text-emerald-800" href="{{ route('courses.show', $video['course']['slug']) }}">
+                            <a class="inline-flex w-fit items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-800 ring-1 ring-emerald-200 transition hover:bg-emerald-100" href="{{ route('courses.show', $video['course']['slug']) }}">
                                 {{ $video['course']['title'] }}
                             </a>
                         @endif
-                        <span class="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-cyan-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan-800 ring-1 ring-cyan-200">
-                            صفحه ویدیو
-                            <span aria-hidden="true">&rarr;</span>
-                        </span>
+                        <div class="mt-auto flex items-center justify-between text-xs text-slate-600">
+                            <span class="inline-flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-cyan-500"></span>
+                                پخش مستقیم
+                            </span>
+                            <span class="inline-flex items-center gap-2 text-cyan-700">
+                                صفحه ویدیو
+                                <span aria-hidden="true">&rarr;</span>
+                            </span>
+                        </div>
                     </div>
                 </a>
             @endforeach
