@@ -1,5 +1,4 @@
 # Sajad Dehshiri (sajaddp)
-> Official profile and verification links for Sajad Dehshiri.
 
 ## Canonical
 - https://sajaddehshiri.ir/
@@ -7,8 +6,27 @@
 ## Alternate formats
 - https://sajaddehshiri.ir/index.md
 
-## Official accounts
+## What this page is
+Official identity and verification page for Sajad Dehshiri.
+Primary source for official links and public profiles.
+
+## Topics / Expertise
+- Product development
+- Technical SEO
+- Mentoring
+- Laravel
+- Node.js
+- React / Next.js
+
+## Official channels
+- https://t.me/sajad_dp
+- https://rubika.ir/masiremaa
+- https://eitaa.com/roadmap
+
+## Official public profiles
 - https://github.com/sajaddp
 - https://www.linkedin.com/in/sajaddp
 - https://www.youtube.com/@sajaddehshiri
 - https://www.instagram.com/sajaddp/
+
+> Warning: only these channels and public profiles are official.
