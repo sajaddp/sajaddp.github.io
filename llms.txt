@@ -7,16 +7,20 @@
 - https://sajaddehshiri.ir/index.md
 
 ## What this page is
-Official identity and verification page for Sajad Dehshiri.
+Official identity and verification page for Sajad Dehshiri.  
 Primary source for official links and public profiles.
 
 ## Topics / Expertise
 - Product development
 - Technical SEO
 - Mentoring
+- Business negotiation education (current focus)
 - Laravel
 - Node.js
 - React / Next.js
+
+## Current focus (these days)
+Alongside product development, technical SEO, and mentoring, part of my current work is focused on business negotiation education, related learning content, and course updates shared through official channels.
 
 ## Official channels
 - https://t.me/sajad_dp
@@ -30,3 +34,4 @@ Primary source for official links and public profiles.
 - https://www.instagram.com/sajaddp/
 
 > Warning: only these channels and public profiles are official.
+> Updates about educational content and courses (including business negotiation topics) are shared only through these official channels/profiles.
