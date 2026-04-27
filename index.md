@@ -45,8 +45,6 @@
 
 ## About (English)
 
-I’m **Sajad Dehshiri (sajaddp)**. I build maintainable products that ship fast, with a strong focus on performance and technical SEO.
+I work on intelligent systems and senior web development — building products that ship fast, scale cleanly, and stay maintainable. Stack: Laravel and Node.js on the backend, React and Next.js on the frontend, with a strong focus on technical SEO.
 
-Alongside product development and technical mentoring, these days I also focus on **business negotiation education** and share related learning content and course updates through my official channels.
-
-This is my official page on **sajaddehshiri.ir** for identity verification and main links.
+I contribute to open-source projects, especially practical tooling and datasets around Iran-related data. These days I also focus on **business negotiation education** and share learning content and course updates through my official channels.
