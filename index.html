@@ -212,6 +212,56 @@
       font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
+    /* Hero CTA buttons */
+    .cta-primary,
+    .cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease, background-color 120ms ease;
+    }
+
+    .cta-primary:focus-visible,
+    .cta-secondary:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.55);
+    }
+
+    .cta-primary:active,
+    .cta-secondary:active {
+      transform: translateY(0) !important;
+      box-shadow: none !important;
+    }
+
+    .cta-primary {
+      background-color: var(--link-primary-bg);
+      border: 1px solid var(--link-primary-border);
+      color: var(--link-primary-text);
+    }
+
+    .cta-primary:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    .cta-secondary {
+      background-color: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .cta-secondary:hover {
+      background-color: var(--chip-bg);
+      transform: translateY(-1px);
+    }
+
     /* Skip link for accessibility */
     .skip-link {
       position: absolute;
@@ -314,39 +364,51 @@
     <div class="max-w-[1040px] mx-auto space-y-8 sm:space-y-10">
 
       <!-- Hero -->
-      <header class="page-card border rounded-2xl p-6 sm:p-8 space-y-4">
-        <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+      <header class="page-card border rounded-2xl p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
+
+          <!-- Avatar: top on mobile, left on desktop (RTL) -->
           <img
             src="https://github.com/sajaddp.png?size=160"
             alt="سجاد ده شیری"
-            width="80" height="80"
+            width="128" height="128"
             loading="eager"
             decoding="async"
-            class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex-shrink-0 border border-[color:var(--border)]"
+            class="order-first sm:order-last w-20 h-20 sm:w-32 sm:h-32 rounded-2xl flex-shrink-0 border border-[color:var(--border)] self-start sm:self-center"
           />
-          <div class="space-y-1.5 flex-1 min-w-0">
+
+          <!-- Text + CTAs: below avatar on mobile, right on desktop (RTL) -->
+          <div class="order-last sm:order-first flex-1 min-w-0 space-y-3">
             <h1 id="hero-title" class="text-3xl sm:text-4xl font-semibold tracking-tight">
               <span class="block">سجاد ده شیری</span>
               <span class="block mt-1 text-sm sm:text-base muted latin-text">Sajad Dehshiri (sajaddp)</span>
             </h1>
+
             <p class="text-sm font-medium">
               متخصص سیستم‌های هوشمند، برنامه‌نویس ارشد وب، فعال در توسعه محصول، سئو فنی، منتورینگ عملی و آموزش مذاکره تجاری.
             </p>
+
             <p class="text-sm muted">
               اگر «سجاد ده شیری»، «سجاد دهشیری»،
               <span class="latin-text">Sajad Dehshiri</span> یا
               <span class="latin-text">sajaddp</span> را جستجو کرده‌ای،
               اینجا مرجع رسمی من روی <span class="latin-text">sajaddehshiri.ir</span> است.
             </p>
+
+            <div class="flex flex-wrap gap-3 pt-1">
+              <a href="https://t.me/sajad_dp"
+                class="cta-primary"
+                rel="me noopener noreferrer" target="_blank">
+                دنبال کردن اطلاع‌رسانی‌ها
+              </a>
+              <a href="https://github.com/sajaddp"
+                class="cta-secondary"
+                rel="me noopener noreferrer" target="_blank">
+                مشاهده گیت‌هاب
+              </a>
+            </div>
           </div>
-        </div>
-        <div
-          class="rounded-xl border border-sky-200/70 dark:border-sky-700/50 bg-sky-50/80 dark:bg-sky-900/20 p-3 text-sm leading-6">
-          <p class="font-semibold">تمرکز این روزها</p>
-          <p class="muted">
-            این روزها بخشی از فعالیتم روی <strong>آموزش مذاکره تجاری</strong> متمرکز است —
-            محتوا و دوره‌ها از طریق کانال‌های پایین اطلاع‌رسانی می‌شود.
-          </p>
+
         </div>
       </header>
 
