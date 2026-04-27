@@ -14,6 +14,7 @@
 - Rubika: <https://rubika.ir/sajaddp71>
 - Eitaa: <https://eitaa.com/roadmap>
 - Bale: <https://ble.ir/sajaddehshiri>
+- Aparat: <https://www.aparat.com/roadmap1>
 
 ## پروفایل‌های عمومی
 
