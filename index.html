@@ -86,7 +86,7 @@
       --bg: #f8fafc;
       --bg-card: #ffffff;
       --border: #e2e8f0;
-      --shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+      --shadow: 0 2px 16px rgba(15, 23, 42, 0.08);
       --text: #020617;
       --muted: #64748b;
       --chip-bg: #f1f5f9;
@@ -106,7 +106,7 @@
         --bg: #020617;
         --bg-card: rgba(15, 23, 42, 0.96);
         --border: rgba(148, 163, 184, 0.5);
-        --shadow: 0 24px 80px rgba(15, 23, 42, 0.9);
+        --shadow: 0 2px 20px rgba(0, 0, 0, 0.40);
         --text: #e5e7eb;
         --muted: #9ca3af;
         --chip-bg: rgba(15, 23, 42, 0.9);
@@ -310,50 +310,62 @@
 <body class="antialiased">
   <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
 
-  <main id="main" class="min-h-screen flex items-center justify-center px-4">
-    <div class="max-w-3xl w-full py-10">
-      <section class="page-card border rounded-2xl p-6 sm:p-8 space-y-6" aria-label="صفحه رسمی سجاد ده شیری">
-        <!-- Header / Name -->
-        <header class="space-y-2">
-          <h1 id="hero-title" class="text-3xl sm:text-4xl font-semibold tracking-tight">
-            <span class="block">سجاد ده شیری</span>
-            <span class="block mt-1 text-sm sm:text-base muted latin-text">Sajad Dehshiri (sajaddp)</span>
-          </h1>
+  <main id="main" class="px-4 sm:px-6 py-10 sm:py-16">
+    <div class="max-w-[1040px] mx-auto space-y-8 sm:space-y-10">
 
-          <p class="text-sm font-medium">
-            متخصص سیستم‌های هوشمند، برنامه‌نویس ارشد وب، فعال در توسعه محصول، سئو فنی، منتورینگ عملی و آموزش مذاکره تجاری.
-          </p>
-
-          <p class="text-sm muted">
-            اگر «سجاد ده شیری»، «سجاد دهشیری»،
-            <span class="latin-text">Sajad Dehshiri</span> یا
-            <span class="latin-text">sajaddp</span> را جستجو کرده‌ای،
-            اینجا مرجع رسمی من روی <span class="latin-text">sajaddehshiri.ir</span> است.
-          </p>
-
-          <div
-            class="mt-3 rounded-xl border border-sky-200/70 dark:border-sky-700/50 bg-sky-50/80 dark:bg-sky-900/20 p-3 text-sm leading-6">
-            <p class="font-semibold">تمرکز این روزها</p>
-            <p class="muted">
-              این روزها بخشی از فعالیتم روی <strong>آموزش مذاکره تجاری</strong> متمرکز است —
-              محتوا و دوره‌ها از طریق کانال‌های پایین اطلاع‌رسانی می‌شود.
+      <!-- Hero -->
+      <header class="page-card border rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+          <img
+            src="https://github.com/sajaddp.png?size=160"
+            alt="سجاد ده شیری"
+            width="80" height="80"
+            loading="eager"
+            decoding="async"
+            class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex-shrink-0 border border-[color:var(--border)]"
+          />
+          <div class="space-y-1.5 flex-1 min-w-0">
+            <h1 id="hero-title" class="text-3xl sm:text-4xl font-semibold tracking-tight">
+              <span class="block">سجاد ده شیری</span>
+              <span class="block mt-1 text-sm sm:text-base muted latin-text">Sajad Dehshiri (sajaddp)</span>
+            </h1>
+            <p class="text-sm font-medium">
+              متخصص سیستم‌های هوشمند، برنامه‌نویس ارشد وب، فعال در توسعه محصول، سئو فنی، منتورینگ عملی و آموزش مذاکره تجاری.
+            </p>
+            <p class="text-sm muted">
+              اگر «سجاد ده شیری»، «سجاد دهشیری»،
+              <span class="latin-text">Sajad Dehshiri</span> یا
+              <span class="latin-text">sajaddp</span> را جستجو کرده‌ای،
+              اینجا مرجع رسمی من روی <span class="latin-text">sajaddehshiri.ir</span> است.
             </p>
           </div>
-        </header>
+        </div>
+        <div
+          class="rounded-xl border border-sky-200/70 dark:border-sky-700/50 bg-sky-50/80 dark:bg-sky-900/20 p-3 text-sm leading-6">
+          <p class="font-semibold">تمرکز این روزها</p>
+          <p class="muted">
+            این روزها بخشی از فعالیتم روی <strong>آموزش مذاکره تجاری</strong> متمرکز است —
+            محتوا و دوره‌ها از طریق کانال‌های پایین اطلاع‌رسانی می‌شود.
+          </p>
+        </div>
+      </header>
 
-        <!-- Official links -->
-        <nav aria-label="لینک‌های رسمی" class="space-y-3">
+      <!-- Official links -->
+      <nav aria-labelledby="links-heading" class="space-y-3">
+        <h2 id="links-heading" class="text-xs font-semibold uppercase tracking-widest muted px-1">لینک‌های رسمی</h2>
 
+        <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-3 sm:gap-4">
+
+          <!-- Primary channels (right in RTL) -->
           <section class="rounded-xl border-2 border-indigo-200 dark:border-indigo-700/50 p-3 sm:p-4 space-y-2.5 bg-indigo-50/40 dark:bg-indigo-950/20"
             aria-label="کانال‌های اطلاع‌رسانی و جامعه">
             <div class="space-y-0.5">
-              <h2 class="text-sm font-bold flex items-center gap-1.5">
+              <h3 class="text-sm font-bold flex items-center gap-1.5">
                 <span class="inline-block w-2.5 h-2.5 rounded-full bg-indigo-500 flex-shrink-0" aria-hidden="true"></span>
                 کانال‌های اطلاع‌رسانی و جامعه
-              </h2>
+              </h3>
               <p class="text-xs muted">اطلاعیه‌ها، آموزش و ارتباط مستقیم</p>
             </div>
-
             <ul class="flex flex-wrap gap-2" role="list">
               <li>
                 <a href="https://t.me/sajad_dp"
@@ -406,95 +418,100 @@
             </ul>
           </section>
 
-          <section class="rounded-xl border border-rose-200/80 dark:border-rose-800/40 p-3 sm:p-4 space-y-2.5 bg-rose-50/30 dark:bg-rose-950/15"
-            aria-label="محتوای ویدئویی">
-            <div class="space-y-0.5">
-              <h2 class="text-sm font-semibold flex items-center gap-1.5">
-                <span class="inline-block w-2 h-2 rounded-full bg-rose-500 flex-shrink-0" aria-hidden="true"></span>
-                محتوای ویدئویی
-              </h2>
-              <p class="text-xs muted">ویدیوهای آموزشی</p>
-            </div>
+          <!-- Video + GitHub stacked (left in RTL) -->
+          <div class="flex flex-col gap-3 sm:gap-4">
+            <section class="rounded-xl border border-rose-200/80 dark:border-rose-800/40 p-3 sm:p-4 space-y-2.5 bg-rose-50/30 dark:bg-rose-950/15"
+              aria-label="محتوای ویدئویی">
+              <div class="space-y-0.5">
+                <h3 class="text-sm font-semibold flex items-center gap-1.5">
+                  <span class="inline-block w-2 h-2 rounded-full bg-rose-500 flex-shrink-0" aria-hidden="true"></span>
+                  محتوای ویدئویی
+                </h3>
+                <p class="text-xs muted">ویدیوهای آموزشی</p>
+              </div>
+              <ul class="flex flex-wrap gap-2" role="list">
+                <li>
+                  <a href="https://www.youtube.com/@sajaddehshiri?sub_confirmation=1"
+                    class="social-chip link-accent"
+                    rel="me noopener noreferrer" target="_blank">
+                    <span class="latin-text font-medium">YouTube</span>
+                    <span class="latin-text chip-handle">@sajaddehshiri</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.aparat.com/roadmap1"
+                    class="social-chip link-accent"
+                    rel="me noopener noreferrer" target="_blank">
+                    <span class="latin-text font-medium">Aparat</span>
+                    <span class="latin-text chip-handle">/roadmap1</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
 
-            <ul class="flex flex-wrap gap-2" role="list">
-              <li>
-                <a href="https://www.youtube.com/@sajaddehshiri?sub_confirmation=1"
-                  class="social-chip link-accent"
-                  rel="me noopener noreferrer" target="_blank">
-                  <span class="latin-text font-medium">YouTube</span>
-                  <span class="latin-text chip-handle">@sajaddehshiri</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.aparat.com/roadmap1"
-                  class="social-chip link-accent"
-                  rel="me noopener noreferrer" target="_blank">
-                  <span class="latin-text font-medium">Aparat</span>
-                  <span class="latin-text chip-handle">/roadmap1</span>
-                </a>
-              </li>
-            </ul>
-          </section>
-
-          <section class="rounded-xl border p-3 sm:p-4 space-y-2.5 bg-slate-50/60 dark:bg-slate-900/30"
-            aria-label="حضور حرفه‌ای">
-            <div class="space-y-0.5">
-              <h2 class="text-sm font-semibold flex items-center gap-1.5">
-                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" aria-hidden="true"></span>
-                حضور حرفه‌ای
-              </h2>
-              <p class="text-xs muted">کدها و پروژه‌های متن‌باز</p>
-            </div>
-
-            <ul class="flex flex-wrap gap-2" role="list">
-              <li>
-                <a href="https://github.com/sajaddp"
-                  class="social-chip link-accent"
-                  rel="me noopener noreferrer" target="_blank">
-                  <span class="latin-text font-medium">GitHub</span>
-                  <span class="latin-text chip-handle">@sajaddp</span>
-                </a>
-              </li>
-            </ul>
-          </section>
-
-          <p class="text-xs muted px-1">
-            فقط همین کانال‌ها و پروفایل‌ها رسمی‌اند. آدرس‌های مشابه روی این پلتفرم‌ها را به نام من حساب نکن.
-          </p>
-        </nav>
-
-        <!-- What I do -->
-        <section aria-label="چه کاری انجام می‌دهم" class="space-y-3 text-sm">
-          <h2 class="text-base font-semibold">چه کاری انجام می‌دهم</h2>
-
-          <div class="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <article class="border rounded-xl p-4 bg-white/60 dark:bg-slate-900/40">
-              <h3 class="font-semibold">توسعه محصول</h3>
-              <p class="mt-1 text-xs sm:text-sm muted">از ایده تا لانچ، محصولی سریع، پایدار و قابل رشد می‌سازم.</p>
-            </article>
-
-            <article class="border rounded-xl p-4 bg-white/60 dark:bg-slate-900/40">
-              <h3 class="font-semibold">سئو فنی</h3>
-              <p class="mt-1 text-xs sm:text-sm muted">ساختار و سرعت سایت را بهبود می‌دهم تا رتبه و نرخ تبدیل بهتر شود.
-              </p>
-            </article>
-
-            <article class="border rounded-xl p-4 bg-white/60 dark:bg-slate-900/40">
-              <h3 class="font-semibold">منتورینگ</h3>
-              <p class="mt-1 text-xs sm:text-sm muted">جلسات عملی برای تصمیم‌های فنی، مسیر شغلی و رشد تیمی.</p>
-            </article>
-
-            <article class="border rounded-xl p-4 bg-white/60 dark:bg-slate-900/40">
-              <h3 class="font-semibold">آموزش مذاکره تجاری</h3>
-              <p class="mt-1 text-xs sm:text-sm muted">
-                این روزها بخشی از فعالیتم به آموزش کاربردی مذاکره در فضای کسب‌وکار اختصاص دارد.
-              </p>
-            </article>
+            <section class="rounded-xl border p-3 sm:p-4 space-y-2.5 bg-slate-50/60 dark:bg-slate-900/30"
+              aria-label="حضور حرفه‌ای">
+              <div class="space-y-0.5">
+                <h3 class="text-sm font-semibold flex items-center gap-1.5">
+                  <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" aria-hidden="true"></span>
+                  حضور حرفه‌ای
+                </h3>
+                <p class="text-xs muted">کدها و پروژه‌های متن‌باز</p>
+              </div>
+              <ul class="flex flex-wrap gap-2" role="list">
+                <li>
+                  <a href="https://github.com/sajaddp"
+                    class="social-chip link-accent"
+                    rel="me noopener noreferrer" target="_blank">
+                    <span class="latin-text font-medium">GitHub</span>
+                    <span class="latin-text chip-handle">@sajaddp</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
           </div>
-        </section>
+        </div>
+
+        <p class="text-xs muted px-1">
+          فقط همین کانال‌ها و پروفایل‌ها رسمی‌اند. آدرس‌های مشابه روی این پلتفرم‌ها را به نام من حساب نکن.
+        </p>
+      </nav>
+
+      <!-- What I do -->
+      <section aria-label="چه کاری انجام می‌دهم" class="space-y-3 text-sm">
+        <h2 class="text-base font-semibold">چه کاری انجام می‌دهم</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <article class="border rounded-xl p-4 bg-white/60 dark:bg-slate-900/40">
+            <h3 class="font-semibold">توسعه محصول</h3>
+            <p class="mt-1 text-xs sm:text-sm muted">از ایده تا لانچ، محصولی سریع، پایدار و قابل رشد می‌سازم.</p>
+          </article>
+
+          <article class="border rounded-xl p-4 bg-white/60 dark:bg-slate-900/40">
+            <h3 class="font-semibold">سئو فنی</h3>
+            <p class="mt-1 text-xs sm:text-sm muted">ساختار و سرعت سایت را بهبود می‌دهم تا رتبه و نرخ تبدیل بهتر شود.
+            </p>
+          </article>
+
+          <article class="border rounded-xl p-4 bg-white/60 dark:bg-slate-900/40">
+            <h3 class="font-semibold">منتورینگ</h3>
+            <p class="mt-1 text-xs sm:text-sm muted">جلسات عملی برای تصمیم‌های فنی، مسیر شغلی و رشد تیمی.</p>
+          </article>
+
+          <article class="border rounded-xl p-4 bg-white/60 dark:bg-slate-900/40">
+            <h3 class="font-semibold">آموزش مذاکره تجاری</h3>
+            <p class="mt-1 text-xs sm:text-sm muted">
+              این روزها بخشی از فعالیتم به آموزش کاربردی مذاکره در فضای کسب‌وکار اختصاص دارد.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bio: side-by-side on lg+ -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
         <!-- Persian intro -->
-        <section aria-label="معرفی فارسی" class="space-y-3 text-sm leading-7">
+        <section aria-label="معرفی فارسی" class="page-card border rounded-2xl p-5 sm:p-6 space-y-3 text-sm leading-7">
           <h2 class="text-base font-semibold">معرفی کوتاه</h2>
 
           <p>
@@ -524,13 +541,13 @@
           </p>
         </section>
 
-        <!-- English section -->
+        <!-- English intro -->
         <section aria-label="English intro" lang="en" dir="ltr"
-          class="latin-text space-y-3 text-sm leading-7 border-t divider pt-5 mt-3">
+          class="latin-text page-card border rounded-2xl p-5 sm:p-6 space-y-3 text-sm leading-7 text-left">
           <h2 class="text-base font-semibold">About Sajad Dehshiri (sajaddp)</h2>
 
           <p>
-            I’m Sajad Dehshiri (sajaddp). I build products that ship fast, scale cleanly,
+            I'm Sajad Dehshiri (sajaddp). I build products that ship fast, scale cleanly,
             and stay maintainable. My stack is mostly Laravel and Node.js on the backend,
             React and Next.js on the frontend, with a strong focus on performance and technical SEO.
           </p>
@@ -548,18 +565,19 @@
           </p>
 
           <p>
-            If you searched for “Sajad Dehshiri”, “Sajad Deh Shiri”, “sajaddp”
+            If you searched for "Sajad Dehshiri", "Sajad Deh Shiri", "sajaddp"
             or the Persian forms «سجاد ده شیری» / «سجاد دهشیری», this is my official page on
             <strong>sajaddehshiri.ir</strong> and the canonical place to verify my identity and access my main links.
           </p>
         </section>
+      </div>
 
-        <!-- Footer -->
-        <footer class="pt-4 border-t divider text-[11px] footer-text flex flex-wrap items-center justify-between gap-2">
-          <span>© <span class="latin-text">Sajad Dehshiri</span></span>
-          <span class="latin-text">Canonical profile page: sajaddehshiri.ir</span>
-        </footer>
-      </section>
+      <!-- Footer -->
+      <footer class="pt-4 border-t divider text-[11px] footer-text flex flex-wrap items-center justify-between gap-2">
+        <span>© <span class="latin-text">Sajad Dehshiri</span></span>
+        <span class="latin-text">Canonical profile page: sajaddehshiri.ir</span>
+      </footer>
+
     </div>
   </main>
 </body>
