@@ -86,39 +86,37 @@
       --bg: #f8fafc;
       --bg-card: #ffffff;
       --border: #e2e8f0;
-      --shadow: 0 2px 16px rgba(15, 23, 42, 0.08);
-      --text: #020617;
+      --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 4px 16px rgba(15, 23, 42, 0.07);
+      --text: #0f172a;
       --muted: #64748b;
       --chip-bg: #f1f5f9;
-      --chip-border: #e2e8f0;
-      --link-primary-bg: #020617;
+      --link-primary-bg: #0f172a;
       --link-primary-border: #1e293b;
       --link-primary-text: #e2e8f0;
       --link-accent-bg: #0f172a;
-      --link-accent-border: #0f172a;
-      --link-accent-text: #e5e7eb;
-      --divider: #e5e7eb;
+      --link-accent-border: #1e293b;
+      --link-accent-text: #e2e8f0;
+      --divider: #e2e8f0;
       --footer-text: #6b7280;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #020617;
-        --bg-card: rgba(15, 23, 42, 0.96);
-        --border: rgba(148, 163, 184, 0.5);
-        --shadow: 0 2px 20px rgba(0, 0, 0, 0.40);
-        --text: #e5e7eb;
-        --muted: #9ca3af;
-        --chip-bg: rgba(15, 23, 42, 0.9);
-        --chip-border: rgba(148, 163, 184, 0.5);
-        --link-primary-bg: #020617;
-        --link-primary-border: #1f2937;
-        --link-primary-text: #e5e7eb;
-        --link-accent-bg: #0b1120;
-        --link-accent-border: #38bdf8;
+        --bg: #060d1a;
+        --bg-card: #0d1829;
+        --border: rgba(148, 163, 184, 0.18);
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(148, 163, 184, 0.06);
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --chip-bg: rgba(15, 23, 42, 0.8);
+        --link-primary-bg: #0f172a;
+        --link-primary-border: #1e293b;
+        --link-primary-text: #e2e8f0;
+        --link-accent-bg: #0c1525;
+        --link-accent-border: #1e3a5f;
         --link-accent-text: #e0f2fe;
-        --divider: rgba(30, 64, 175, 0.6);
-        --footer-text: #9ca3af;
+        --divider: rgba(148, 163, 184, 0.15);
+        --footer-text: #94a3b8;
       }
     }
 
@@ -138,11 +136,6 @@
 
     .muted {
       color: var(--muted);
-    }
-
-    .chip {
-      background-color: var(--chip-bg);
-      border-color: var(--chip-border);
     }
 
     .link-primary {
