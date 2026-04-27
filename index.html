@@ -100,6 +100,9 @@
       --link-accent-bg: #0f172a;
       --link-accent-border: #1e293b;
       --link-accent-text: #e2e8f0;
+      --link-soft-bg: #eef2ff;
+      --link-soft-border: #c7d2fe;
+      --link-soft-text: #3730a3;
       --divider: #e2e8f0;
       --footer-text: #6b7280;
     }
@@ -123,6 +126,9 @@
         --link-accent-bg: #0c1525;
         --link-accent-border: #1e3a5f;
         --link-accent-text: #e0f2fe;
+        --link-soft-bg: rgba(49, 46, 129, 0.18);
+        --link-soft-border: rgba(99, 102, 241, 0.3);
+        --link-soft-text: #a5b4fc;
         --divider: rgba(148, 163, 184, 0.15);
         --footer-text: #94a3b8;
       }
@@ -156,6 +162,12 @@
       background-color: var(--link-accent-bg);
       border-color: var(--link-accent-border);
       color: var(--link-accent-text);
+    }
+
+    .link-soft {
+      background-color: var(--link-soft-bg);
+      border-color: var(--link-soft-border);
+      color: var(--link-soft-text);
     }
 
     /* Social link rows */
@@ -503,7 +515,7 @@
               <ul class="flex flex-col gap-1.5" role="list">
                 <li>
                   <a href="https://www.youtube.com/@sajaddehshiri?sub_confirmation=1"
-                    class="link-row link-accent"
+                    class="link-row link-soft"
                     rel="me noopener noreferrer" target="_blank">
                     <span class="latin-text font-semibold">YouTube</span>
                     <span class="latin-text link-row-handle">@sajaddehshiri</span>
@@ -511,7 +523,7 @@
                 </li>
                 <li>
                   <a href="https://www.aparat.com/roadmap1"
-                    class="link-row link-accent"
+                    class="link-row link-soft"
                     rel="me noopener noreferrer" target="_blank">
                     <span class="latin-text font-semibold">Aparat</span>
                     <span class="latin-text link-row-handle">/roadmap1</span>
