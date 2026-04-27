@@ -107,6 +107,10 @@
       --link-community-border: #c7d2fe;
       --link-community-text: #1e1b4b;
       --link-community-handle: #4f46e5;
+      --link-community-hover-bg: #eef2ff;
+      --link-community-hover-border: #a5b4fc;
+      --link-community-hover-shadow: 0 2px 8px rgba(79, 70, 229, 0.12);
+      --link-community-focus-ring: rgba(79, 70, 229, 0.35);
       --divider: #e2e8f0;
       --footer-text: #6b7280;
     }
@@ -137,6 +141,10 @@
         --link-community-border: rgba(129, 140, 248, 0.32);
         --link-community-text: #e0e7ff;
         --link-community-handle: #a5b4fc;
+        --link-community-hover-bg: rgba(49, 46, 129, 0.26);
+        --link-community-hover-border: rgba(129, 140, 248, 0.52);
+        --link-community-hover-shadow: 0 3px 10px rgba(15, 23, 42, 0.42);
+        --link-community-focus-ring: rgba(129, 140, 248, 0.5);
         --divider: rgba(148, 163, 184, 0.15);
         --footer-text: #94a3b8;
       }
@@ -187,6 +195,16 @@
     .link-community .link-row-handle {
       color: var(--link-community-handle);
       opacity: 1;
+    }
+
+    .link-row.link-community:hover {
+      background-color: var(--link-community-hover-bg);
+      border-color: var(--link-community-hover-border);
+      box-shadow: var(--link-community-hover-shadow);
+    }
+
+    .link-row.link-community:focus-visible {
+      box-shadow: 0 0 0 3px var(--link-community-focus-ring);
     }
 
     /* Social link rows */
@@ -463,7 +481,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-3 sm:gap-4">
 
           <!-- Primary channels (right in RTL) -->
-          <section class="rounded-xl border-2 border-indigo-200 dark:border-indigo-700/50 p-3 sm:p-4 space-y-2.5 bg-indigo-50/40 dark:bg-indigo-950/20"
+          <section class="rounded-xl border border-indigo-200/70 dark:border-indigo-400/30 p-3 sm:p-4 space-y-2.5 bg-white/70 dark:bg-slate-900/35"
             aria-label="کانال‌های اطلاع‌رسانی و جامعه">
             <div class="space-y-0.5">
               <h3 class="text-sm font-bold flex items-center gap-1.5">
