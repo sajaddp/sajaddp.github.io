@@ -157,6 +157,49 @@
       color: var(--link-accent-text);
     }
 
+    /* Social link chips */
+    .social-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 13px;
+      border-radius: 9999px;
+      border-width: 1px;
+      border-style: solid;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 140ms ease, box-shadow 140ms ease;
+    }
+
+    .social-chip:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .social-chip:hover {
+        box-shadow: 0 3px 14px rgba(0, 0, 0, 0.55);
+      }
+    }
+
+    .social-chip:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    .social-chip:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.55);
+    }
+
+    .chip-handle {
+      font-size: 0.6875rem;
+      opacity: 0.68;
+      letter-spacing: 0.01em;
+    }
+
     .divider {
       border-color: var(--divider);
     }
@@ -319,50 +362,50 @@
             <ul class="flex flex-wrap gap-2" role="list">
               <li>
                 <a href="https://t.me/sajad_dp"
-                  class="chip link-primary inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs hover:opacity-90 transition-opacity"
+                  class="social-chip link-primary"
                   rel="me noopener noreferrer" target="_blank">
                   <span class="latin-text font-medium">Telegram</span>
-                  <span class="latin-text text-[10px] opacity-70">@sajaddp</span>
+                  <span class="latin-text chip-handle">@sajaddp</span>
                 </a>
               </li>
               <li>
                 <a href="https://rubika.ir/sajaddp71"
-                  class="chip link-primary inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs hover:opacity-90 transition-opacity"
+                  class="social-chip link-primary"
                   rel="me noopener noreferrer" target="_blank">
                   <span class="latin-text font-medium">Rubika</span>
-                  <span class="latin-text text-[10px] opacity-70">@sajaddp71</span>
+                  <span class="latin-text chip-handle">@sajaddp71</span>
                 </a>
               </li>
               <li>
                 <a href="https://eitaa.com/roadmap"
-                  class="chip link-primary inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs hover:opacity-90 transition-opacity"
+                  class="social-chip link-primary"
                   rel="me noopener noreferrer" target="_blank">
                   <span class="latin-text font-medium">Eitaa</span>
-                  <span class="latin-text text-[10px] opacity-70">@roadmap</span>
+                  <span class="latin-text chip-handle">@roadmap</span>
                 </a>
               </li>
               <li>
                 <a href="https://ble.ir/sajaddehshiri"
-                  class="chip link-primary inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs hover:opacity-90 transition-opacity"
+                  class="social-chip link-primary"
                   rel="me noopener noreferrer" target="_blank">
                   <span class="latin-text font-medium">Bale</span>
-                  <span class="latin-text text-[10px] opacity-70">@sajaddehshiri</span>
+                  <span class="latin-text chip-handle">@sajaddehshiri</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/sajaddp/"
-                  class="chip link-primary inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs hover:opacity-90 transition-opacity"
+                  class="social-chip link-primary"
                   rel="me noopener noreferrer" target="_blank">
                   <span class="latin-text font-medium">Instagram</span>
-                  <span class="latin-text text-[10px] opacity-70">@sajaddp</span>
+                  <span class="latin-text chip-handle">@sajaddp</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/sajaddp"
-                  class="chip link-primary inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs hover:opacity-90 transition-opacity"
+                  class="social-chip link-primary"
                   rel="me noopener noreferrer" target="_blank">
                   <span class="latin-text font-medium">LinkedIn</span>
-                  <span class="latin-text text-[10px] opacity-70">/in/sajaddp</span>
+                  <span class="latin-text chip-handle">/in/sajaddp</span>
                 </a>
               </li>
             </ul>
@@ -381,18 +424,18 @@
             <ul class="flex flex-wrap gap-2" role="list">
               <li>
                 <a href="https://www.youtube.com/@sajaddehshiri?sub_confirmation=1"
-                  class="chip link-accent inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs hover:opacity-95 transition-opacity"
+                  class="social-chip link-accent"
                   rel="me noopener noreferrer" target="_blank">
                   <span class="latin-text font-medium">YouTube</span>
-                  <span class="latin-text text-[10px] opacity-75">@sajaddehshiri</span>
+                  <span class="latin-text chip-handle">@sajaddehshiri</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.aparat.com/roadmap1"
-                  class="chip link-accent inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs hover:opacity-95 transition-opacity"
+                  class="social-chip link-accent"
                   rel="me noopener noreferrer" target="_blank">
                   <span class="latin-text font-medium">Aparat</span>
-                  <span class="latin-text text-[10px] opacity-75">/roadmap1</span>
+                  <span class="latin-text chip-handle">/roadmap1</span>
                 </a>
               </li>
             </ul>
@@ -411,10 +454,10 @@
             <ul class="flex flex-wrap gap-2" role="list">
               <li>
                 <a href="https://github.com/sajaddp"
-                  class="chip link-accent inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs hover:opacity-95 transition-opacity"
+                  class="social-chip link-accent"
                   rel="me noopener noreferrer" target="_blank">
                   <span class="latin-text font-medium">GitHub</span>
-                  <span class="latin-text text-[10px] opacity-75">@sajaddp</span>
+                  <span class="latin-text chip-handle">@sajaddp</span>
                 </a>
               </li>
             </ul>
