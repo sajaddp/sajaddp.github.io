@@ -19,7 +19,7 @@
 
 ## محتوای ویدئویی
 
-- YouTube: <https://www.youtube.com/@sajaddehshiri>
+- YouTube: <https://www.youtube.com/@sajaddehshiri?sub_confirmation=1>
 - Aparat: <https://www.aparat.com/roadmap1>
 
 ## حضور حرفه‌ای
