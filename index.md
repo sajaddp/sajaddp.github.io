@@ -8,14 +8,16 @@
 
 در کنار توسعه محصول، سئو فنی و منتورینگ، این روزها بخشی از فعالیت من به آموزش مذاکره تجاری و محتوای مرتبط هم اختصاص دارد.
 
-## اطلاع‌رسانی و پیام‌رسان‌ها
+## کانال‌های اطلاع‌رسانی و جامعه
 
 - Telegram: <https://t.me/sajad_dp>
 - Rubika: <https://rubika.ir/sajaddp71>
 - Eitaa: <https://eitaa.com/roadmap>
 - Bale: <https://ble.ir/sajaddehshiri>
+- Instagram: <https://www.instagram.com/sajaddp/>
+- LinkedIn: <https://www.linkedin.com/in/sajaddp>
 
-## محتوای ویدیویی و آموزشی
+## محتوای ویدئویی
 
 - YouTube: <https://www.youtube.com/@sajaddehshiri>
 - Aparat: <https://www.aparat.com/roadmap1>
@@ -23,11 +25,6 @@
 ## حضور حرفه‌ای
 
 - GitHub: <https://github.com/sajaddp>
-- LinkedIn: <https://www.linkedin.com/in/sajaddp>
-
-## شبکه اجتماعی
-
-- Instagram: <https://www.instagram.com/sajaddp/>
 
 > فقط همین کانال‌ها و پروفایل‌ها رسمی‌اند. آدرس‌های مشابه را به نام من حساب نکن.
 >
