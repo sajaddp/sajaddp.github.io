@@ -11,7 +11,7 @@
 ## کانال‌های رسمی
 
 - Telegram: <https://t.me/sajad_dp>
-- Rubika: <https://rubika.ir/masiremaa>
+- Rubika: <https://rubika.ir/sajaddp71>
 - Eitaa: <https://eitaa.com/roadmap>
 - Bale: <https://ble.ir/sajaddehshiri>
 
