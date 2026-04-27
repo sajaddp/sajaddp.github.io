@@ -11,9 +11,11 @@ Official identity and verification page for Sajad Dehshiri.
 Primary source for official links and public profiles.
 
 ## Topics / Expertise
+- Intelligent systems specialist
+- Senior web developer
 - Product development
 - Technical SEO
-- Mentoring
+- Practical mentoring
 - Business negotiation education (current focus)
 - Laravel
 - Node.js
