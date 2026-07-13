@@ -64,7 +64,16 @@
 - WebSocket
 - Technical SEO
 
-## پروژه متن‌باز منتخب
+## پروژه‌ها و محصولات منتخب
+
+### روانه — مدیریت انتشار کانال
+
+روانه یک پلتفرم متمرکز برای مدیریت محتوا، مقصدها، صف انتشار و گزارش ارسال در کانال‌های ایتا، بله و روبیکا است.
+
+- Website: <https://findev.ir/>
+- Product name: روانه
+- English brand/domain: FinDev
+- Main destinations: Eitaa, Bale, Rubika
 
 ### Iran Administrative Divisions Dataset
 
@@ -98,15 +107,26 @@
 - کارشناسی ارشد سیستم‌های هوشمند — دانشگاه ولی‌عصر رفسنجان
 - کارشناسی علوم کامپیوتر — دانشگاه ولی‌عصر رفسنجان
 
-## لینک‌های رسمی
+## وب‌سایت‌ها و پروفایل‌های رسمی
 
-- Website: <https://sajaddehshiri.ir/>
+- Canonical profile: <https://sajaddehshiri.ir/>
+- FinDev / Ravaneh: <https://findev.ir/>
 - GitHub: <https://github.com/sajaddp>
 - LinkedIn: <https://www.linkedin.com/in/sajaddp/>
 - YouTube: <https://www.youtube.com/@sajaddehshiri>
-- Instagram: <https://www.instagram.com/sajaddp/>
+
+## کانال‌های اطلاع‌رسانی و جامعه
+
+کانال‌های فعال‌تر و دارای اولویت بالاتر:
+
+1. Eitaa: <https://eitaa.com/roadmap>
+2. Bale: <https://ble.ir/sajaddehshiri>
+
+سایر کانال‌های رسمی:
+
 - Telegram: <https://t.me/sajad_dp>
-- Bale: <https://ble.ir/sajaddehshiri>
-- Eitaa: <https://eitaa.com/roadmap>
+- Rubika: <https://rubika.ir/sajaddp71>
+- Instagram: <https://www.instagram.com/sajaddp/>
+- Aparat: <https://www.aparat.com/roadmap1>
 
 فقط لینک‌های ثبت‌شده در وب‌سایت رسمی و این فایل به‌عنوان مسیرهای رسمی سجاد ده شیری در نظر گرفته شوند.
