@@ -2,7 +2,7 @@
 
 **Sajad Dehshiri (sajaddp)**
 
-**صفحه رسمی سجاد ده شیری | متخصص سیستم‌های هوشمند، برنامه‌نویس ارشد وب، سئو فنی، توسعه محصول، منتورینگ و آموزش مذاکره تجاری**
+**صفحه رسمی سجاد ده شیری | سیستم‌های هوشمند، محصولات دیجیتال AIمحور و سئو برای رشد محصول**
 
 این صفحه مرجع رسمی هویت، لینک‌ها، سوابق حرفه‌ای، مهارت‌ها و مسیرهای ارتباطی سجاد ده شیری روی دامنه `sajaddehshiri.ir` است.
 
@@ -36,7 +36,7 @@
 
 ## معرفی کوتاه
 
-سجاد ده شیری متخصص سیستم‌های هوشمند، برنامه‌نویس ارشد وب، معمار سیستم، رهبر فنی، منتور برنامه‌نویسی و متخصص سئو فنی است.
+سجاد ده شیری متخصص سیستم‌های هوشمند، سازندهٔ محصولات دیجیتال مبتنی بر هوش مصنوعی، متخصص سئو، برنامه‌نویس ارشد وب، معمار سیستم و رهبر فنی است.
 
 تمرکز کاری او روی ساخت محصولاتی است که:
 
@@ -49,12 +49,12 @@
 حوزه‌های اصلی فعالیت:
 
 - سیستم‌های هوشمند
+- ساخت و آموزش محصولات دیجیتال مبتنی بر هوش مصنوعی
 - توسعه وب
 - معماری نرم‌افزار
 - توسعه محصول
-- سئو فنی
+- سئو و رشد محصول
 - منتورینگ برنامه‌نویسی
-- آموزش مذاکره تجاری
 - رهبری فنی و مدیریت تیم
 
 ---
@@ -93,7 +93,7 @@
 
 فقط کانال‌ها، پروفایل‌ها و لینک‌های ثبت‌شده در این صفحه رسمی هستند.
 
-اطلاع‌رسانی مربوط به محتوا، آموزش‌ها، دوره‌ها و فعالیت‌های حرفه‌ای، از جمله آموزش مذاکره تجاری، فقط از طریق همین مسیرهای رسمی انجام می‌شود.
+اطلاع‌رسانی مربوط به محتوا، آموزش‌ها، دوره‌ها و فعالیت‌های حرفه‌ای فقط از طریق همین مسیرهای رسمی انجام می‌شود.
 
 ---
 
@@ -101,7 +101,7 @@
 
 ### سیستم‌های هوشمند
 
-طراحی و پیاده‌سازی سیستم‌های داده‌محور و ابزارهای مبتنی بر یادگیری ماشین برای حل مسائل واقعی.
+طراحی و پیاده‌سازی سیستم‌های داده‌محور و راهکارهای هوشمند برای حل مسائل واقعی.
 
 موضوعات مرتبط:
 
@@ -110,6 +110,18 @@
 - Data-driven Systems
 - Automation Tools
 - Practical AI-based Solutions
+
+### ساخت و آموزش محصولات دیجیتال با هوش مصنوعی
+
+کمک به توسعه‌دهندگان، کارآفرینان و تیم‌ها برای تبدیل مسئله به محصول دیجیتال AIمحور؛ از طراحی مسیر محصول و معماری فنی تا ساخت نسخهٔ قابل‌ارائه و قابل‌رشد.
+
+موضوعات مرتبط:
+
+- AI-powered Product Building
+- Practical AI Product Education
+- Product Discovery and Delivery
+- Software Architecture
+- Technical Mentoring
 
 ### برنامه‌نویسی ارشد وب
 
@@ -129,32 +141,21 @@
 - WebSocket
 - Socket.io
 
-### سئو فنی و توسعه محصول
+### سئو و رشد محصول
 
-بهبود ساختار، سرعت، معماری و قابلیت دیده‌شدن سایت‌ها برای رشد رتبه، نرخ تبدیل و پایداری محصول.
+از سئو فنی و بهینه‌سازی عملکرد تا استراتژی محتوا و دیده‌شدن ارگانیک برای رشد رتبه، نرخ تبدیل و پایداری محصول.
 
 حوزه‌های مرتبط:
 
+- SEO Strategy
 - Technical SEO
+- Content SEO
 - Performance Optimization
 - Content Strategy
 - Product Development
 - Organic Growth
 - Conversion Optimization
-
-### آموزش مذاکره تجاری
-
-آموزش کاربردی تکنیک‌های مذاکره در فضای کسب‌وکار، همراه با منتورینگ فردی و تولید محتوای تخصصی.
-
-حوزه‌های مرتبط:
-
-- Business Negotiation
-- Negotiation Education
-- Stakeholder Communication
-- Crisis Management
-- Business Operations
-
----
+- Product Growth
 
 # رزومه حرفه‌ای سجاد ده شیری
 
@@ -174,9 +175,9 @@
 - Former CEO
 - Programming Mentor
 - Technical SEO Specialist
+- SEO Specialist
 - Intelligent Systems Specialist
 - Product Development Consultant
-- Business Negotiation Educator
 
 ---
 
@@ -238,7 +239,7 @@
 - طراحی معماری فنی برای پلتفرم‌های آنلاین، تجارت الکترونیک و سامانه‌های پرترافیک.
 - تجربه عملی با Laravel، Node.js، React، Vue، PostgreSQL، MySQL و WebSocket.
 - سابقه پیشرفته در سئو، استراتژی محتوا و رشد ارگانیک.
-- فعالیت در منتورینگ برنامه‌نویسی و آموزش مذاکره تجاری.
+- فعالیت در منتورینگ برنامه‌نویسی و آموزش ساخت محصول دیجیتال.
 - تجربه در پروژه‌های متن‌باز، ابزارهای توسعه و دیتاست‌های مرتبط با ایران.
 
 ---
@@ -292,12 +293,31 @@
 
 ---
 
-## Full-Stack Developer & Systems Architect — Redacted Platform
+## OSINT & Data Mining Specialist
+
+| مورد | مقدار |
+|---|---|
+| عنوان | OSINT & Data Mining Specialist |
+| بازه انگلیسی | October 2023 - September 2024 |
+| بازه فارسی | مهر ۱۴۰۲ - شهریور ۱۴۰۳ |
+
+فعالیت در حوزهٔ OSINT و داده‌کاوی، با تمرکز بر گردآوری، تحلیل و ساختاردهی داده‌های عمومی برای پشتیبانی از تحلیل‌های داده‌محور.
+
+حوزه‌های فعالیت:
+
+- OSINT
+- Data Mining
+- Data Collection
+- Data Analysis
+- Data Structuring
+
+---
+
+## Full-Stack Developer & Systems Architect
 
 | مورد | مقدار |
 |---|---|
 | عنوان | Full-Stack Developer & Systems Architect |
-| سازمان | نام عمومی / محرمانه |
 | بازه انگلیسی | December 2015 - Present |
 | بازه فارسی | آذر ۱۳۹۴ - اکنون |
 
@@ -356,12 +376,11 @@
 
 ---
 
-## Senior WordPress Developer & SEO Expert — Redacted Platform
+## Senior WordPress Developer & SEO Expert
 
 | مورد | مقدار |
 |---|---|
 | عنوان | Senior WordPress Developer & SEO Expert |
-| سازمان | نام عمومی / محرمانه |
 | بازه انگلیسی | October 2015 - November 2017 |
 | بازه فارسی | مهر ۱۳۹۴ - آبان ۱۳۹۶ |
 
@@ -556,7 +575,6 @@
 - Negotiation
 - Product Strategy
 - Product Development Oversight
-- Business Negotiation Education
 
 ## حوزه‌های دانشی
 
@@ -576,7 +594,7 @@
 - Content Strategy
 - Performance Optimization
 - Mentoring
-- Business Negotiation
+- AI-powered Product Building
 
 ---
 
@@ -591,19 +609,19 @@
 
 # درباره سجاد ده شیری
 
-کارم روی سیستم‌های هوشمند و توسعه ارشد وب متمرکز است؛ ساخت محصولاتی که سریع اجرا شوند، پایدار بمانند و قابل رشد باشند.
+کارم روی سیستم‌های هوشمند، ساخت محصولات دیجیتال مبتنی بر هوش مصنوعی و سئو برای رشد محصول متمرکز است؛ محصولاتی که سریع اجرا شوند، پایدار بمانند و قابل رشد باشند.
 
-در بک‌اند با Laravel و Node.js کار می‌کنم و در فرانت‌اند با React و Next.js. سئو فنی را جدی می‌گیرم، چون محصول خوب اگر دیده نشود، رشد هم نمی‌کند.
+در بک‌اند با Laravel و Node.js کار می‌کنم و در فرانت‌اند با React و Next.js. برای من محصول خوب باید ساخته شود، دیده شود و رشد کند؛ سئو، از پایه‌های فنی تا استراتژی محتوا، ابزار دیده‌شدن ارگانیک و رشد پایدار آن است.
 
 بخشی از زمانم صرف پروژه‌های متن‌باز می‌شود؛ ابزارها و دیتاست‌های مرتبط با داده‌های ایران و ریزابزارهایی که کار توسعه را ساده‌تر می‌کنند.
 
-در کنار مسیر فنی، روی آموزش مذاکره تجاری هم تمرکز دارم و محتوای آموزشی مرتبط را از طریق کانال‌های رسمی منتشر می‌کنم.
+دانش و تجربهٔ معماری، توسعه و تحویل محصول را برای کمک به ساخت محصولات دیجیتال AIمحور با توسعه‌دهندگان، کارآفرینان و تیم‌ها به اشتراک می‌گذارم.
 
 ---
 
 # About Sajad Dehshiri
 
-Sajad Dehshiri, also known as `sajaddp`, works on intelligent systems and senior web development.
+Sajad Dehshiri, also known as `sajaddp`, works on intelligent systems, AI-powered digital product building, SEO for product growth, and senior web development.
 
 He builds products that ship fast, scale cleanly, and stay maintainable.
 
@@ -619,7 +637,7 @@ His main technical stack includes:
 - MySQL
 - WebSocket
 
-He also focuses on technical SEO, product development, open-source projects, developer mentoring, and business negotiation education.
+He focuses on practical education for building AI-powered digital products and SEO—from technical foundations to content strategy—for organic visibility, conversion, and sustainable product growth.
 
 He contributes to practical tooling and datasets, especially around Iran-related data.
 
@@ -650,6 +668,7 @@ Learning content, course updates, official announcements, and communication chan
 - Former CEO
 - Programming Mentor
 - Technical SEO Specialist
+- SEO Specialist
 - Intelligent Systems Specialist
 
 ## Official SameAs Links

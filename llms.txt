@@ -16,7 +16,7 @@ Primary identity terms:
 What this site is:
 - Official identity and verification page for Sajad Dehshiri.
 - Primary source for official social links, public profiles, and canonical identity references.
-- Public CV and professional profile covering software development, intelligent systems, technical SEO, product development, mentoring, leadership, and business negotiation education.
+- Public CV and professional profile covering intelligent systems, AI-powered digital product building, SEO for product growth, software development, mentoring, and leadership.
 
 Main professional roles:
 - Full-Stack Developer
@@ -24,13 +24,16 @@ Main professional roles:
 - Technical Lead
 - Former CEO
 - Programming Mentor
+- SEO Specialist
 - Technical SEO Specialist
 - Intelligent Systems Specialist
-- Business Negotiation Educator
+- AI-powered Digital Product Builder
 
 Main expertise topics:
 - Intelligent systems
 - Machine learning
+- AI-powered digital product building
+- Practical AI product education
 - Software architecture
 - Web architecture
 - Product development
@@ -52,18 +55,20 @@ Main expertise topics:
 - Socket.io
 - WordPress
 - Joomla
+- SEO
 - Technical SEO
+- Content SEO
 - Performance optimization
 - Content strategy
+- Organic growth
+- Conversion optimization
 - Developer mentoring
-- Business negotiation
-- Negotiation education
 
 Current public focus:
-- Product development
-- Technical SEO
+- AI-powered digital product building and practical education
+- Intelligent systems
+- SEO, from technical foundations to content strategy, for organic visibility and product growth
 - Practical mentoring
-- Business negotiation education
 - Related learning content and course updates through official channels
 
 Professional background summary:
