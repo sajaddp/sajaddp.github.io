@@ -1,3 +1,37 @@
+# Search, AI retrieval, and AI model-training crawlers are intentionally allowed
+# to access this public profile. The wildcard rule also permits current and future
+# crawlers that are not named below.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: OAI-AdsBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 User-agent: *
 Allow: /
+
 Sitemap: https://sajaddehshiri.ir/sitemap.xml

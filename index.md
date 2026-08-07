@@ -6,6 +6,8 @@
 
 این صفحه مرجع رسمی هویت، لینک‌ها، سوابق حرفه‌ای، مهارت‌ها و مسیرهای ارتباطی سجاد ده شیری روی دامنه `sajaddehshiri.ir` است.
 
+آخرین به‌روزرسانی: `2026-08-07` · [نسخهٔ اصلی HTML](https://sajaddehshiri.ir/) · [نسخهٔ LLM-readable](https://sajaddehshiri.ir/llms.txt)
+
 اگر عبارت‌های زیر را جستجو کرده‌ای، این صفحه مرجع رسمی من است:
 
 - سجاد ده شیری
@@ -67,12 +69,12 @@
 
 | پلتفرم | شناسه | لینک رسمی |
 |---|---|---|
-| Telegram | `@sajad_dp` | <https://t.me/sajad_dp> |
-| Rubika | `@sajaddp71` | <https://rubika.ir/sajaddp71> |
-| Eitaa | `@roadmap` | <https://eitaa.com/roadmap> |
 | Bale | `@sajaddehshiri` | <https://ble.ir/sajaddehshiri> |
-| Instagram | `@sajaddp` | <https://www.instagram.com/sajaddp/> |
+| Eitaa | `@roadmap` | <https://eitaa.com/roadmap> |
+| Telegram | `@sajad_dp` | <https://t.me/sajad_dp> |
 | LinkedIn | `/in/sajaddp` | <https://www.linkedin.com/in/sajaddp> |
+| Rubika | `@sajaddp71` | <https://rubika.ir/sajaddp71> |
+| Instagram | `@sajaddp` | <https://www.instagram.com/sajaddp/> |
 
 ### محتوای ویدئویی
 
