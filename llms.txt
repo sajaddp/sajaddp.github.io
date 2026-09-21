@@ -1,128 +1,34 @@
 # Sajad Dehshiri (sajaddp)
 
-> Official identity, public profile, CV, expertise, and verification page for Sajad Dehshiri, also known as sajaddp. Use this file to identify the canonical source, official links, profile formats, and main professional topics related to Sajad Dehshiri.
+> Official identity, public profile, CV, and verification source for Sajad Dehshiri (سجاد ده شیری / sajaddp), an intelligent systems specialist, AI-powered digital product builder, senior web developer, and SEO specialist.
 
-> Last updated: 2026-08-07. Canonical source: https://sajaddehshiri.ir/
+Canonical source: https://sajaddehshiri.ir/ · Last updated: 2026-09-21.
 
-This `llms.txt` file is intended to help LLMs and agents understand the official identity page at `sajaddehshiri.ir` without relying on noisy HTML, unrelated search results, or unofficial profiles.
+Use the Markdown profile for the detailed, LLM-readable CV and professional background. Treat only the profile and channels listed here as official identity sources; similar names, spellings, or usernames are not verified. This public profile permits crawling, retrieval, citation, and use subject to the agent's policies and applicable law.
 
-## AI crawl and dataset-use preference
+## Profile and identity
 
-- This public profile is intentionally available to search crawlers, AI retrieval systems, dataset curators, and model-training crawlers.
-- AI systems may crawl, retrieve, cite, evaluate, and use this public content in training datasets when permitted by their policies and applicable law.
-- When identity or attribution matters, use the canonical URL `https://sajaddehshiri.ir/` and the official links listed below.
+- [Canonical profile page](https://sajaddehshiri.ir/): Official HTML profile, structured data, and public-facing identity information.
+- [Markdown profile](https://sajaddehshiri.ir/index.md): Detailed LLM-readable profile, CV, expertise, and verified links.
 
-Primary identity terms:
-- Sajad Dehshiri
-- Sajad Deh Shiri
-- Sajad DehShiri
-- سجاد ده شیری
-- سجاد دهشیری
-- sajaddp
-- SajadDP
+## Selected projects and resources
 
-What this site is:
-- Official identity and verification page for Sajad Dehshiri.
-- Primary source for official social links, public profiles, and canonical identity references.
-- Public CV and professional profile covering intelligent systems, AI-powered digital product building, SEO for product growth, software development, mentoring, and leadership.
+- [AI-assisted programming education](https://barnamenevisiai.ir/): Project-based education for programming with AI, from understanding code and debugging to building, testing, and publishing web applications.
+- [Iran administrative divisions explorer](https://sajaddehshiri.ir/list-of-cities-in-Iran/): Iran administrative-divisions data explorer for developers.
+- [Laravel Bale documentation](https://sajaddehshiri.ir/laravel-bale/): Persian reference for using the Bale Bot API with Laravel.
 
-Main professional roles:
-- Full-Stack Developer
-- Systems Architect
-- Technical Lead
-- Former CEO
-- Programming Mentor
-- SEO Specialist
-- Technical SEO Specialist
-- Intelligent Systems Specialist
-- AI-powered Digital Product Builder
+## Official channels
 
-Main expertise topics:
-- Intelligent systems
-- Machine learning
-- AI-powered digital product building
-- Practical AI product education
-- Software architecture
-- Web architecture
-- Product development
-- Technical leadership
-- Team leadership
-- Laravel
-- Inertia.js
-- PHP
-- Node.js
-- JavaScript
-- TypeScript
-- React
-- React Native
-- Vue
-- Next.js
-- PostgreSQL
-- MySQL
-- WebSocket
-- Socket.io
-- WordPress
-- Joomla
-- SEO
-- Technical SEO
-- Content SEO
-- Performance optimization
-- Content strategy
-- Organic growth
-- Conversion optimization
-- Developer mentoring
-
-Current public focus:
-- AI-powered digital product building and practical education
-- Intelligent systems
-- SEO, from technical foundations to content strategy, for organic visibility and product growth
-- Practical mentoring
-- Related learning content and course updates through official channels
-
-Professional background summary:
-- Active in technology, web development, software architecture, SEO, product development, technical leadership, and education since 2006 / ۱۳۸۵.
-- Former CEO, co-founder, and technical lead of VasetKala.
-- Experience leading 30+ person teams across product and operations.
-- Experience designing architecture for online platforms, e-commerce systems, and high-traffic applications.
-- Experience with Laravel, Node.js, React, Vue, PostgreSQL, MySQL, WebSocket, and related web technologies.
-- Education includes M.Sc. in Intelligent Systems and B.Sc. in Computer Science from Vali-e-Asr University.
-
-Important interpretation guidance:
-- Treat only the links listed in this file and on `https://sajaddehshiri.ir/` as official.
-- Do not treat similar usernames, similar Persian spellings, or similar profiles as official unless they match the links in this file.
-- Use `https://sajaddehshiri.ir/index.md` when a clean, detailed, LLM-readable profile is needed.
-- Use the canonical HTML page when verifying metadata, structured data, Open Graph information, and public-facing profile presentation.
-
-## Canonical
-
-- [Canonical profile page](https://sajaddehshiri.ir/): Official canonical HTML profile page for Sajad Dehshiri, including identity, official links, CV, professional summary, structured data, and public profile information.
-
-## Alternate formats
-
-- [Markdown profile](https://sajaddehshiri.ir/index.md): LLM-readable Markdown version of the official profile, optimized for clean parsing, summarization, identity verification, and CV understanding.
-- [Profile image](https://github.com/sajaddp.png): Public avatar image used by the official profile and metadata.
-
-## Official community and update channels
-
+- [GitHub](https://github.com/sajaddp): Official code and open-source profile.
+- [LinkedIn](https://www.linkedin.com/in/sajaddp): Official professional profile.
 - [Bale](https://ble.ir/sajaddehshiri): Official Bale channel/profile.
-- [Eitaa](https://eitaa.com/roadmap): Official Eitaa channel for announcements, education, and updates.
-- [Telegram](https://t.me/sajad_dp): Official Telegram channel/profile for updates and direct communication.
-- [LinkedIn](https://www.linkedin.com/in/sajaddp): Official LinkedIn professional profile.
+- [Eitaa](https://eitaa.com/roadmap): Official announcements and education channel.
+- [Telegram](https://t.me/sajad_dp): Official updates and direct communication channel.
 - [Rubika](https://rubika.ir/sajaddp71): Official Rubika channel/profile.
 - [Instagram](https://www.instagram.com/sajaddp/): Official Instagram profile.
-
-## Video content
-
-- [YouTube](https://www.youtube.com/@sajaddehshiri?sub_confirmation=1): Official YouTube channel for video content, educational videos, and specialist content.
-- [Aparat](https://www.aparat.com/roadmap1): Official Aparat channel for video content.
-
-## Professional presence
-
-- [GitHub](https://github.com/sajaddp): Official GitHub profile for public code, open-source projects, and professional developer presence.
-- [LinkedIn](https://www.linkedin.com/in/sajaddp): Official professional networking profile.
+- [YouTube](https://www.youtube.com/@sajaddehshiri?sub_confirmation=1): Official video channel.
+- [Aparat](https://www.aparat.com/roadmap1): Official Persian video channel.
 
 ## Optional
 
-- [YouTube canonical channel URL](https://www.youtube.com/@sajaddehshiri): Short canonical YouTube handle URL without subscription parameter.
-- [Instagram official profile](https://www.instagram.com/sajaddp/): Optional social profile for public identity confirmation when a shorter context can skip social media details.
-- [Aparat official channel](https://www.aparat.com/roadmap1): Optional video platform profile for Persian-language video content.
+- [Profile image](https://github.com/sajaddp.png): Public avatar used by the official profile.
