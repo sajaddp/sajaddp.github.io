@@ -18,4 +18,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
+    <url>
+    <loc>https://sajaddehshiri.ir/list-of-cities-in-Iran/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+    <url>
+    <loc>https://sajaddehshiri.ir/laravel-bale/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
 </urlset>
