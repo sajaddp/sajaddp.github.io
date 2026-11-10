@@ -57,31 +57,32 @@
     content="Intelligent Systems Specialist • AI-powered Digital Product Builder • SEO, Content Strategy & Organic Growth" />
   <meta name="twitter:image" content="https://github.com/sajaddp.png" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- TailwindCSS via CDN -->
-  <script>
-    tailwind = window.tailwind || {};
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            fa: ['Vazirmatn', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
-            en: ['Roboto', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
-          }
-        }
-      }
-    };
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Regenerate after editing utility classes:
+       npx --yes tailwindcss@3.4.17 --content ./index.html --minify -o ./assets/tailwind.css -->
+  <link rel="stylesheet" href="./assets/tailwind.css" />
 
   <!-- Theme colors -->
   <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#060d1a" media="(prefers-color-scheme: dark)" />
 
   <style>
+    @font-face {
+      font-family: "Vazirmatn";
+      src: url("./assets/fonts/vazirmatn-arabic.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC;
+    }
+
+    @font-face {
+      font-family: "Roboto";
+      src: url("./assets/fonts/roboto-latin.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+    }
+
     :root {
       color-scheme: light dark;
       --bg: #f8fafc;
@@ -89,15 +90,13 @@
       --border: #e2e8f0;
       --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 4px 16px rgba(15, 23, 42, 0.07);
       --text: #0f172a;
-      --muted: #64748b;
+      --muted: #596980;
       --chip-bg: #f1f5f9;
-      --link-primary-bg: #3730a3;
-      --link-primary-border: #4338ca;
-      --link-primary-text: #e0e7ff;
+      --focus: #4338ca;
       --cta-bg: #4338ca;
+      --cta-hover-bg: #3730a3;
       --cta-border: #6366f1;
       --cta-text: #eef2ff;
-      --cta-shadow: rgba(67, 56, 202, 0.32);
       --link-accent-bg: #0f172a;
       --link-accent-border: #1e293b;
       --link-accent-text: #e2e8f0;
@@ -111,7 +110,6 @@
       --link-community-hover-bg: #eef2ff;
       --link-community-hover-border: #a5b4fc;
       --link-community-hover-shadow: 0 2px 8px rgba(79, 70, 229, 0.12);
-      --link-community-focus-ring: rgba(79, 70, 229, 0.35);
       --divider: #e2e8f0;
       --footer-text: #6b7280;
     }
@@ -125,13 +123,11 @@
         --text: #e2e8f0;
         --muted: #94a3b8;
         --chip-bg: rgba(15, 23, 42, 0.8);
-        --link-primary-bg: #312e81;
-        --link-primary-border: #4338ca;
-        --link-primary-text: #e0e7ff;
+        --focus: #a5b4fc;
         --cta-bg: #4f46e5;
+        --cta-hover-bg: #4338ca;
         --cta-border: #6366f1;
         --cta-text: #eef2ff;
-        --cta-shadow: rgba(99, 102, 241, 0.4);
         --link-accent-bg: #0c1525;
         --link-accent-border: #1e3a5f;
         --link-accent-text: #e0f2fe;
@@ -145,7 +141,6 @@
         --link-community-hover-bg: rgba(49, 46, 129, 0.26);
         --link-community-hover-border: rgba(129, 140, 248, 0.52);
         --link-community-hover-shadow: 0 3px 10px rgba(15, 23, 42, 0.42);
-        --link-community-focus-ring: rgba(129, 140, 248, 0.5);
         --divider: rgba(148, 163, 184, 0.15);
         --footer-text: #94a3b8;
       }
@@ -155,7 +150,7 @@
       margin: 0;
       background-color: var(--bg);
       color: var(--text);
-      font-family: "Vazirmatn", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Vazirmatn", "Roboto", system-ui, sans-serif;
       text-rendering: optimizeLegibility;
     }
 
@@ -169,16 +164,27 @@
       color: var(--muted);
     }
 
-    .link-primary {
-      background-color: var(--link-primary-bg);
-      border-color: var(--link-primary-border);
-      color: var(--link-primary-text);
+    a:focus-visible,
+    :is(h2, h3)[tabindex="-1"]:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    :is(h2, h3)[tabindex="-1"] {
+      scroll-margin-block-start: 1rem;
     }
 
     .link-accent {
       background-color: var(--link-accent-bg);
       border-color: var(--link-accent-border);
       color: var(--link-accent-text);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .link-featured {
+        background-color: #1e2b54;
+        border-color: var(--cta-border);
+      }
     }
 
     .link-soft {
@@ -195,17 +201,12 @@
 
     .link-community .link-row-handle {
       color: var(--link-community-handle);
-      opacity: 1;
     }
 
     .link-row.link-community:hover {
       background-color: var(--link-community-hover-bg);
       border-color: var(--link-community-hover-border);
       box-shadow: var(--link-community-hover-shadow);
-    }
-
-    .link-row.link-community:focus-visible {
-      box-shadow: 0 0 0 3px var(--link-community-focus-ring);
     }
 
     /* Social link rows */
@@ -224,7 +225,7 @@
       text-decoration: none;
       width: 100%;
       box-sizing: border-box;
-      transition: transform 120ms ease, box-shadow 120ms ease, opacity 100ms ease;
+      transition: transform 120ms ease, box-shadow 120ms ease;
     }
 
     .link-row:hover {
@@ -243,14 +244,8 @@
       box-shadow: none;
     }
 
-    .link-row:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.55);
-    }
-
     .link-row-handle {
       font-size: 0.75rem;
-      opacity: 0.68;
       letter-spacing: 0.01em;
       direction: ltr;
       unicode-bidi: isolate;
@@ -270,8 +265,14 @@
       color: var(--footer-text);
     }
 
+    .footer-formats a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+    }
+
     .latin-text {
-      font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Roboto", system-ui, sans-serif;
     }
 
     /* Hero CTA buttons */
@@ -286,33 +287,18 @@
       font-size: 0.875rem;
       font-weight: 600;
       text-decoration: none;
-      white-space: nowrap;
-      transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease, background-color 120ms ease;
-    }
-
-    .cta-primary:focus-visible,
-    .cta-secondary:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.55);
-    }
-
-    .cta-primary:active,
-    .cta-secondary:active {
-      transform: translateY(0) !important;
-      box-shadow: none !important;
+      text-align: center;
+      transition: background-color 120ms ease;
     }
 
     .cta-primary {
       background-color: var(--cta-bg);
       border: 1px solid var(--cta-border);
       color: var(--cta-text);
-      box-shadow: 0 2px 10px var(--cta-shadow);
     }
 
     .cta-primary:hover {
-      opacity: 0.9;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px var(--cta-shadow);
+      background-color: var(--cta-hover-bg);
     }
 
     .cta-secondary {
@@ -323,26 +309,49 @@
 
     .cta-secondary:hover {
       background-color: var(--chip-bg);
-      transform: translateY(-1px);
+    }
+
+    .profile-jump {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 0.25em;
+    }
+
+    .profile-jump:hover {
+      color: var(--text);
+    }
+
+    .experience-list > li + li {
+      border-top: 1px solid var(--divider);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .link-row {
+        transition: none;
+      }
+
+      .link-row:hover {
+        transform: none;
+      }
     }
 
     /* Skip link for accessibility */
     .skip-link {
       position: absolute;
-      top: -48px;
-      right: 12px;
+      inset-block-start: 12px;
+      inset-inline-start: 12px;
       background: #111827;
       color: #fff;
       padding: 10px 12px;
       border-radius: 12px;
       z-index: 50;
-      transition: top 0.2s ease;
-      outline: none;
     }
 
-    .skip-link:focus {
-      top: 12px;
-      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.5);
+    .skip-link:not(:focus) {
+      clip-path: inset(50%);
     }
   </style>
 
@@ -558,7 +567,7 @@
         <div class="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
 
           <!-- Avatar: top on mobile, left on desktop (RTL) -->
-          <img src="https://github.com/sajaddp.png?size=160" alt="سجاد ده شیری" width="128" height="128" loading="eager"
+          <img src="./assets/profile.png" alt="سجاد ده شیری" width="128" height="128" loading="eager"
             decoding="async"
             class="order-first sm:order-last w-20 h-20 sm:w-32 sm:h-32 rounded-2xl flex-shrink-0 border border-[color:var(--border)] self-start sm:self-center" />
 
@@ -566,38 +575,62 @@
           <div class="order-last sm:order-first flex-1 min-w-0 space-y-3">
             <h1 id="hero-title" class="text-3xl sm:text-4xl font-semibold tracking-tight">
               <span class="block">سجاد ده شیری</span>
-              <span class="block mt-1 text-sm sm:text-base muted latin-text">Sajad Dehshiri (sajaddp)</span>
+              <span class="block mt-1 text-sm sm:text-base muted latin-text" lang="en"><bdi dir="ltr">Sajad Dehshiri (sajaddp)</bdi></span>
             </h1>
 
             <p class="text-sm font-medium">
-              متخصص سیستم‌های هوشمند، سازنده و آموزش‌دهندهٔ محصولات دیجیتال AIمحور و متخصص سئو.
-            </p>
-
-            <p class="text-sm muted">
-              اگر «سجاد ده شیری»، «سجاد دهشیری»،
-              <span class="latin-text">Sajad Dehshiri</span> یا
-              <span class="latin-text">sajaddp</span> را جستجو کرده‌ای،
-              اینجا مرجع رسمی من روی <span class="latin-text">sajaddehshiri.ir</span> است.
+              متخصص سیستم‌های هوشمند، سازنده و آموزش‌دهندهٔ محصولات دیجیتال مبتنی بر هوش مصنوعی و متخصص سئو.
             </p>
 
             <div class="flex flex-wrap gap-3 pt-1">
-              <a href="https://eitaa.com/roadmap" class="cta-primary" rel="me noopener noreferrer" target="_blank">
-                دنبال کردن آموزش‌ها و اطلاع‌رسانی‌ها
+              <a href="https://eitaa.com/roadmap" class="cta-primary" rel="me noreferrer">
+                دنبال کردن آموزش‌ها در ایتا
               </a>
-              <a href="https://github.com/sajaddp" class="cta-secondary" rel="me noopener noreferrer" target="_blank">
-                مشاهده گیت‌هاب
+              <a href="#professional-heading" class="cta-secondary">
+                ارتباط حرفه‌ای
               </a>
             </div>
+
+            <nav aria-label="بخش‌های صفحه" class="flex flex-wrap gap-x-4 text-sm">
+              <a class="profile-jump" href="#resources-heading">نمونه‌کارها</a>
+              <a class="profile-jump" href="#resume-heading">رزومه</a>
+              <a class="profile-jump latin-text" href="#english-heading" lang="en">English bio</a>
+            </nav>
           </div>
 
         </div>
       </header>
 
+      <!-- Selected projects and resources -->
+      <section aria-labelledby="resources-heading" class="page-card border rounded-2xl p-5 sm:p-6 space-y-3">
+        <h2 id="resources-heading" class="text-lg font-semibold" tabindex="-1">پروژه‌ها و منابع منتخب</h2>
+        <ul class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-2" role="list">
+          <li>
+            <a href="/list-of-cities-in-Iran/" class="link-row link-accent link-featured h-full">
+              <span>
+                <span class="block font-semibold">کاوشگر دادهٔ تقسیمات کشوری ایران</span>
+                <span class="block mt-1">جست‌وجو و دریافت داده‌های شهرها، شهرستان‌ها و دیگر تقسیمات کشوری</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://barnamenevisiai.ir/" class="link-row link-community h-full" rel="noreferrer">
+              <span class="font-semibold">برنامه‌نویسی با هوش مصنوعی</span>
+            </a>
+          </li>
+          <li>
+            <a href="/laravel-bale/" class="link-row link-community h-full">
+              <span class="font-semibold"><bdi class="latin-text" lang="en" dir="ltr">Laravel Bale</bdi> — مستندات بازوی بله</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
       <!-- Official links -->
       <nav aria-labelledby="links-heading" class="space-y-3">
-        <h2 id="links-heading" class="text-xs font-semibold uppercase tracking-widest muted px-1">لینک‌های رسمی</h2>
+        <h2 id="links-heading" class="text-base font-semibold px-1">لینک‌های رسمی</h2>
 
-        <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-3 sm:gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] lg:items-start gap-3 sm:gap-4">
 
           <!-- Primary channels (right in RTL) -->
           <section
@@ -609,47 +642,36 @@
                   aria-hidden="true"></span>
                 کانال‌های اطلاع‌رسانی و جامعه
               </h3>
-              <p class="text-xs muted">آموزش ساخت محصول AIمحور، اطلاعیه‌ها و ارتباط مستقیم</p>
+              <p class="text-xs muted">آموزش ساخت محصول با هوش مصنوعی، اطلاعیه‌ها و ارتباط مستقیم</p>
             </div>
             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1.5" role="list">
               <li>
-                <a href="https://ble.ir/sajaddehshiri" class="link-row link-community" rel="me noopener noreferrer"
-                  target="_blank">
+                <a href="https://ble.ir/sajaddehshiri" class="link-row link-community" rel="me noreferrer">
                   <span class="latin-text font-semibold">Bale</span>
                   <span class="latin-text link-row-handle">@sajaddehshiri</span>
                 </a>
               </li>
               <li>
-                <a href="https://eitaa.com/roadmap" class="link-row link-community" rel="me noopener noreferrer"
-                  target="_blank">
+                <a href="https://eitaa.com/roadmap" class="link-row link-community" rel="me noreferrer">
                   <span class="latin-text font-semibold">Eitaa</span>
                   <span class="latin-text link-row-handle">@roadmap</span>
                 </a>
               </li>
               <li>
-                <a href="https://t.me/sajad_dp" class="link-row link-community" rel="me noopener noreferrer"
-                  target="_blank">
+                <a href="https://t.me/sajad_dp" class="link-row link-community" rel="me noreferrer">
                   <span class="latin-text font-semibold">Telegram</span>
                   <span class="latin-text link-row-handle">@sajad_dp</span>
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/sajaddp" class="link-row link-community"
-                  rel="me noopener noreferrer" target="_blank">
-                  <span class="latin-text font-semibold">LinkedIn</span>
-                  <span class="latin-text link-row-handle">/in/sajaddp</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://rubika.ir/sajaddp71" class="link-row link-community" rel="me noopener noreferrer"
-                  target="_blank">
+                <a href="https://rubika.ir/sajaddp71" class="link-row link-community" rel="me noreferrer">
                   <span class="latin-text font-semibold">Rubika</span>
                   <span class="latin-text link-row-handle">@sajaddp71</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/sajaddp/" class="link-row link-community"
-                  rel="me noopener noreferrer" target="_blank">
+                  rel="me noreferrer">
                   <span class="latin-text font-semibold">Instagram</span>
                   <span class="latin-text link-row-handle">@sajaddp</span>
                 </a>
@@ -657,7 +679,7 @@
             </ul>
           </section>
 
-          <!-- Video + GitHub stacked (left in RTL) -->
+          <!-- Video and professional links -->
           <div class="flex flex-col gap-3 sm:gap-4">
             <section
               class="rounded-xl border border-rose-200/80 dark:border-rose-800/40 p-3 sm:p-4 space-y-2.5 bg-rose-50/30 dark:bg-rose-950/15"
@@ -671,15 +693,14 @@
               </div>
               <ul class="flex flex-col gap-1.5" role="list">
                 <li>
-                  <a href="https://www.youtube.com/@sajaddehshiri?sub_confirmation=1" class="link-row link-soft"
-                    rel="me noopener noreferrer" target="_blank">
+                  <a href="https://www.youtube.com/@sajaddehshiri" class="link-row link-soft"
+                    rel="me noreferrer">
                     <span class="latin-text font-semibold">YouTube</span>
                     <span class="latin-text link-row-handle">@sajaddehshiri</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.aparat.com/roadmap1" class="link-row link-soft" rel="me noopener noreferrer"
-                    target="_blank">
+                  <a href="https://www.aparat.com/roadmap1" class="link-row link-soft" rel="me noreferrer">
                     <span class="latin-text font-semibold">Aparat</span>
                     <span class="latin-text link-row-handle">/roadmap1</span>
                   </a>
@@ -687,22 +708,27 @@
               </ul>
             </section>
 
-            <section class="rounded-xl border p-3 sm:p-4 space-y-2.5 bg-slate-50/60 dark:bg-slate-900/30"
-              aria-label="حضور حرفه‌ای">
+            <section class="rounded-xl border border-[color:var(--border)] p-3 sm:p-4 space-y-2.5 bg-slate-50/60 dark:bg-slate-900/30"
+              aria-labelledby="professional-heading">
               <div class="space-y-0.5">
-                <h3 class="text-sm font-semibold flex items-center gap-1.5">
+                <h3 id="professional-heading" class="text-sm font-semibold flex items-center gap-1.5" tabindex="-1">
                   <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0"
                     aria-hidden="true"></span>
                   حضور حرفه‌ای
                 </h3>
-                <p class="text-xs muted">کدها و پروژه‌های متن‌باز</p>
+                <p class="text-xs muted">پروژه‌های متن‌باز و ارتباط حرفه‌ای</p>
               </div>
               <ul class="flex flex-col gap-1.5" role="list">
                 <li>
-                  <a href="https://github.com/sajaddp" class="link-row link-accent" rel="me noopener noreferrer"
-                    target="_blank">
+                  <a href="https://github.com/sajaddp" class="link-row link-accent" rel="me noreferrer">
                     <span class="latin-text font-semibold">GitHub</span>
                     <span class="latin-text link-row-handle">@sajaddp</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/sajaddp" class="link-row link-accent" rel="me noreferrer">
+                    <span class="latin-text font-semibold">LinkedIn</span>
+                    <span class="latin-text link-row-handle">/in/sajaddp</span>
                   </a>
                 </li>
               </ul>
@@ -714,32 +740,6 @@
           فقط همین کانال‌ها و پروفایل‌ها رسمی‌اند. آدرس‌های مشابه روی این پلتفرم‌ها را به نام من حساب نکن.
         </p>
       </nav>
-
-      <!-- Selected projects and resources -->
-      <section aria-labelledby="resources-heading" class="page-card border rounded-2xl p-5 sm:p-6 space-y-3">
-        <div class="space-y-0.5">
-          <h2 id="resources-heading" class="text-base font-semibold">پروژه‌ها و منابع منتخب</h2>
-          <p class="text-xs muted">آموزش‌ها، ابزارها و مستندات فنی</p>
-        </div>
-        <ul class="grid grid-cols-1 sm:grid-cols-3 gap-2" role="list">
-          <li>
-            <a href="https://barnamenevisiai.ir/" class="link-row link-accent" rel="noopener noreferrer"
-              target="_blank">
-              <span class="font-semibold">برنامه‌نویسی با هوش مصنوعی</span>
-            </a>
-          </li>
-          <li>
-            <a href="/list-of-cities-in-Iran/" class="link-row link-accent">
-              <span class="font-semibold">کاوشگر دادهٔ تقسیمات کشوری ایران</span>
-            </a>
-          </li>
-          <li>
-            <a href="/laravel-bale/" class="link-row link-accent">
-              <span class="font-semibold"><span class="latin-text">Laravel Bale</span> — مستندات بازوی بله</span>
-            </a>
-          </li>
-        </ul>
-      </section>
 
       <!-- What I do -->
       <section aria-label="چه کاری انجام می‌دهم" class="space-y-3 text-sm">
@@ -780,39 +780,54 @@
       </section>
 
       <!-- Resume -->
-      <!-- Resume -->
       <section aria-labelledby="resume-heading"
         class="page-card border rounded-2xl p-5 sm:p-6 space-y-6 text-sm leading-7">
         <div class="space-y-2">
-          <h2 id="resume-heading" class="text-lg font-semibold">رزومه حرفه‌ای سجاد ده شیری</h2>
+          <h2 id="resume-heading" class="text-lg font-semibold" tabindex="-1">رزومه حرفه‌ای سجاد ده شیری</h2>
           <p class="muted">
             خلاصه‌ای از سوابق کاری، مدیریتی، فنی و آموزشی؛ شامل بیش از یک دهه تجربه در توسعه وب،
             معماری سیستم، سئو، مدیریت تیم، توسعه محصول و آموزش.
           </p>
+          <nav aria-label="بخش‌های رزومه" class="flex flex-wrap gap-x-4">
+            <a class="profile-jump" href="#experience-heading">سوابق کاری</a>
+            <a class="profile-jump" href="#education-skills-heading">تحصیلات و مهارت‌ها</a>
+          </nav>
         </div>
+
+        <!-- Key Highlights -->
+        <section aria-labelledby="highlights-heading" class="space-y-3">
+          <h3 id="highlights-heading" class="text-base font-semibold">نکات برجسته</h3>
+
+          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-y divider py-4" role="list">
+            <li>
+              <strong class="block text-lg">از سال ۱۳۸۵</strong>
+              <span class="muted">فعالیت در فناوری، توسعه وب و مدیریت محصول</span>
+            </li>
+            <li>
+              <strong class="block text-lg">تیم‌های ۳۰ نفره و بزرگ‌تر</strong>
+              <span class="muted">مدیریت و رهبری در محصول و عملیات</span>
+            </li>
+            <li>
+              <strong class="block text-lg">واسط‌کالا</strong>
+              <span class="muted">مدیرعامل، هم‌بنیان‌گذار و رهبر فنی</span>
+            </li>
+          </ul>
+        </section>
 
         <!-- Professional Summary -->
         <section aria-labelledby="resume-summary-heading" class="space-y-3">
           <h3 id="resume-summary-heading" class="text-base font-semibold">خلاصه حرفه‌ای</h3>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <article class="border rounded-xl p-4 border-[color:var(--border)] bg-slate-50/50 dark:bg-slate-900/20">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <article>
               <h4 class="font-semibold mb-1">توسعه و معماری نرم‌افزار</h4>
               <p class="muted">
-                فول‌استک دولوپر با تمرکز بر
-                <span class="latin-text">Laravel</span>،
-                <span class="latin-text">Node.js</span>،
-                <span class="latin-text">JavaScript</span>،
-                <span class="latin-text">React</span>،
-                <span class="latin-text">Vue</span>،
-                <span class="latin-text">PostgreSQL</span>،
-                <span class="latin-text">MySQL</span>
-                و سیستم‌های مبتنی بر
-                <span class="latin-text">WebSocket</span>.
+                توسعهٔ فول‌استک و طراحی معماری پلتفرم‌های آنلاین، تجارت الکترونیک و سامانه‌های پرترافیک،
+                همراه با تجربه در سئو، استراتژی محتوا و رشد ارگانیک.
               </p>
             </article>
 
-            <article class="border rounded-xl p-4 border-[color:var(--border)] bg-slate-50/50 dark:bg-slate-900/20">
+            <article>
               <h4 class="font-semibold mb-1">رهبری فنی و مدیریتی</h4>
               <p class="muted">
                 سابقه مدیریت شرکت، رهبری تیم‌های چندنفره، استخدام، منتورینگ، مذاکره، عملیات کسب‌وکار،
@@ -822,49 +837,16 @@
           </div>
         </section>
 
-        <!-- Key Highlights -->
-        <section aria-labelledby="highlights-heading" class="space-y-3">
-          <h3 id="highlights-heading" class="text-base font-semibold">نکات برجسته</h3>
-
-          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2" role="list">
-            <li class="border rounded-lg p-3 border-[color:var(--border)]">
-              سابقه فعالیت از سال <strong>۱۳۸۵</strong> / <span class="latin-text">2006</span>
-              در فناوری، توسعه وب، سئو، معماری سیستم، مدیریت محصول و رهبری فنی
-            </li>
-            <li class="border rounded-lg p-3 border-[color:var(--border)]">
-              تجربه <strong>مدیریت و رهبری تیم‌های ۳۰+ نفره</strong> در محصول و عملیات
-            </li>
-            <li class="border rounded-lg p-3 border-[color:var(--border)]">
-              مدیرعامل، هم‌بنیان‌گذار و رهبر فنی <strong>VasetKala</strong>
-            </li>
-            <li class="border rounded-lg p-3 border-[color:var(--border)]">
-              طراحی معماری فنی برای <strong>پلتفرم‌های آنلاین، تجارت الکترونیک و سامانه‌های پرترافیک</strong>
-            </li>
-            <li class="border rounded-lg p-3 border-[color:var(--border)]">
-              تجربه عملی با <span class="latin-text">Laravel</span>،
-              <span class="latin-text">Node.js</span>،
-              <span class="latin-text">React</span>،
-              <span class="latin-text">Vue</span>،
-              <span class="latin-text">PostgreSQL</span> و
-              <span class="latin-text">WebSocket</span>
-            </li>
-            <li class="border rounded-lg p-3 border-[color:var(--border)]">
-              سابقه پیشرفته در <strong>سئو، استراتژی محتوا و رشد ارگانیک</strong>
-            </li>
-          </ul>
-        </section>
-
         <!-- Experience -->
         <section aria-labelledby="experience-heading" class="space-y-4">
-          <h3 id="experience-heading" class="text-base font-semibold">سوابق کاری منتخب</h3>
+          <h3 id="experience-heading" class="text-base font-semibold" tabindex="-1">سوابق کاری منتخب</h3>
 
-          <div class="space-y-3">
-
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                <h4 class="font-semibold">High School Teacher — Ministry of Education, Iran</h4>
-                <div class="text-xs muted sm:text-left">
-                  <div class="latin-text" dir="ltr">
+          <ol class="experience-list" role="list">
+            <li class="py-3">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                <h4 class="font-semibold latin-text text-right" lang="en" dir="ltr">High School Teacher — Ministry of Education, Iran</h4>
+                <div class="text-xs muted sm:text-left sm:shrink-0">
+                  <div class="latin-text" lang="en" dir="ltr">
                     <time datetime="2024-09">September 2024</time> - Present
                   </div>
                   <div>شهریور ۱۴۰۳ - اکنون</div>
@@ -873,13 +855,26 @@
               <p class="muted mt-2">
                 فعالیت آموزشی در وزارت آموزش‌وپرورش ایران، با تمرکز بر انتقال دانش و مهارت‌های کاربردی.
               </p>
-            </article>
-
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                <h4 class="font-semibold">CEO & Technical Lead — VasetKala</h4>
-                <div class="text-xs muted sm:text-left">
-                  <div class="latin-text" dir="ltr">
+            </li>
+            <li class="py-3">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                <h4 class="font-semibold latin-text text-right" lang="en" dir="ltr">OSINT &amp; Data Mining Specialist</h4>
+                <div class="text-xs muted sm:text-left sm:shrink-0">
+                  <div class="latin-text" lang="en" dir="ltr">
+                    <time datetime="2023-10">October 2023</time> - <time datetime="2024-09">September 2024</time>
+                  </div>
+                  <div>مهر ۱۴۰۲ - شهریور ۱۴۰۳</div>
+                </div>
+              </div>
+              <p class="muted mt-2">
+                فعالیت در حوزهٔ <span class="latin-text">OSINT</span> و داده‌کاوی، با تمرکز بر گردآوری، تحلیل و ساختاردهی داده‌های عمومی برای پشتیبانی از تحلیل‌های داده‌محور.
+              </p>
+            </li>
+            <li class="py-3">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                <h4 class="font-semibold latin-text text-right" lang="en" dir="ltr">CEO & Technical Lead — VasetKala</h4>
+                <div class="text-xs muted sm:text-left sm:shrink-0">
+                  <div class="latin-text" lang="en" dir="ltr">
                     <time datetime="2017-10">October 2017</time> - <time datetime="2023-04">April 2023</time>
                   </div>
                   <div>مهر ۱۳۹۶ - فروردین ۱۴۰۲</div>
@@ -897,28 +892,12 @@
                 <span class="latin-text">MySQL</span> و
                 <span class="latin-text">WebSocket</span>.
               </p>
-            </article>
-
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                <h4 class="font-semibold latin-text">OSINT &amp; Data Mining Specialist</h4>
-                <div class="text-xs muted sm:text-left">
-                  <div class="latin-text" dir="ltr">
-                    <time datetime="2023-10">October 2023</time> - <time datetime="2024-09">September 2024</time>
-                  </div>
-                  <div>مهر ۱۴۰۲ - شهریور ۱۴۰۳</div>
-                </div>
-              </div>
-              <p class="muted mt-2">
-                فعالیت در حوزهٔ <span class="latin-text">OSINT</span> و داده‌کاوی، با تمرکز بر گردآوری، تحلیل و ساختاردهی داده‌های عمومی برای پشتیبانی از تحلیل‌های داده‌محور.
-              </p>
-            </article>
-
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                <h4 class="font-semibold latin-text">Full-Stack Developer &amp; Systems Architect</h4>
-                <div class="text-xs muted sm:text-left">
-                  <div class="latin-text" dir="ltr">
+            </li>
+            <li class="py-3">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                <h4 class="font-semibold latin-text text-right" lang="en" dir="ltr">Full-Stack Developer &amp; Systems Architect</h4>
+                <div class="text-xs muted sm:text-left sm:shrink-0">
+                  <div class="latin-text" lang="en" dir="ltr">
                     <time datetime="2015-12">December 2015</time> - Present
                   </div>
                   <div>آذر ۱۳۹۴ - اکنون</div>
@@ -932,13 +911,42 @@
                 <span class="latin-text">Node.js</span> و
                 <span class="latin-text">TypeScript</span>.
               </p>
-            </article>
-
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                <h4 class="font-semibold">Web Development Specialist & Freelance Consultant — Pelakweb</h4>
-                <div class="text-xs muted sm:text-left">
-                  <div class="latin-text" dir="ltr">
+            </li>
+            <li class="py-3">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                <h4 class="font-semibold latin-text text-right" lang="en" dir="ltr">Senior WordPress Developer &amp; SEO Expert</h4>
+                <div class="text-xs muted sm:text-left sm:shrink-0">
+                  <div class="latin-text" lang="en" dir="ltr">
+                    <time datetime="2015-10">October 2015</time> - <time datetime="2017-11">November 2017</time>
+                  </div>
+                  <div>مهر ۱۳۹۴ - آبان ۱۳۹۶</div>
+                </div>
+              </div>
+              <p class="muted mt-2">
+                توسعه افزونه‌ها و قالب‌های اختصاصی وردپرس، حل چالش‌های مدیریت کاربر، بهینه‌سازی بک‌اند با
+                <span class="latin-text">PHP</span> و اجرای استراتژی‌های پیشرفته سئو برای یک پلتفرم تخصصی آنلاین.
+              </p>
+            </li>
+            <li class="py-3">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                <h4 class="font-semibold latin-text text-right" lang="en" dir="ltr">Development Manager & Lead Developer — Shertranix Platform</h4>
+                <div class="text-xs muted sm:text-left sm:shrink-0">
+                  <div class="latin-text" lang="en" dir="ltr">
+                    <time datetime="2012-10">October 2012</time> - <time datetime="2015-11">November 2015</time>
+                  </div>
+                  <div>مهر ۱۳۹۱ - آبان ۱۳۹۴</div>
+                </div>
+              </div>
+              <p class="muted mt-2">
+                مدیر توسعه و برنامه‌نویس ارشد یکی از سایت‌های اصلی پلتفرم Shertranix؛ طراحی قابلیت‌های جدید برای کاربران
+                ایرانی و فارسی‌زبان، هدایت تیم توسعه، تحقیق‌وتوسعه و بهبود تجربه کاربری.
+              </p>
+            </li>
+            <li class="py-3">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                <h4 class="font-semibold latin-text text-right" lang="en" dir="ltr">Web Development Specialist & Freelance Consultant — Pelakweb</h4>
+                <div class="text-xs muted sm:text-left sm:shrink-0">
+                  <div class="latin-text" lang="en" dir="ltr">
                     <time datetime="2012-03">March 2012</time> - <time datetime="2018-05">May 2018</time>
                   </div>
                   <div>اسفند ۱۳۹۰ - اردیبهشت ۱۳۹۷</div>
@@ -952,45 +960,12 @@
                 سئو و توسعه با
                 <span class="latin-text">JavaScript</span>.
               </p>
-            </article>
-
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                <h4 class="font-semibold latin-text">Senior WordPress Developer &amp; SEO Expert</h4>
-                <div class="text-xs muted sm:text-left">
-                  <div class="latin-text" dir="ltr">
-                    <time datetime="2015-10">October 2015</time> - <time datetime="2017-11">November 2017</time>
-                  </div>
-                  <div>مهر ۱۳۹۴ - آبان ۱۳۹۶</div>
-                </div>
-              </div>
-              <p class="muted mt-2">
-                توسعه افزونه‌ها و قالب‌های اختصاصی وردپرس، حل چالش‌های مدیریت کاربر، بهینه‌سازی بک‌اند با
-                <span class="latin-text">PHP</span> و اجرای استراتژی‌های پیشرفته سئو برای یک پلتفرم تخصصی آنلاین.
-              </p>
-            </article>
-
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                <h4 class="font-semibold">Development Manager & Lead Developer — Shertranix Platform</h4>
-                <div class="text-xs muted sm:text-left">
-                  <div class="latin-text" dir="ltr">
-                    <time datetime="2012-10">October 2012</time> - <time datetime="2015-11">November 2015</time>
-                  </div>
-                  <div>مهر ۱۳۹۱ - آبان ۱۳۹۴</div>
-                </div>
-              </div>
-              <p class="muted mt-2">
-                مدیر توسعه و برنامه‌نویس ارشد یکی از سایت‌های اصلی پلتفرم Shertranix؛ طراحی قابلیت‌های جدید برای کاربران
-                ایرانی و فارسی‌زبان، هدایت تیم توسعه، تحقیق‌وتوسعه و بهبود تجربه کاربری.
-              </p>
-            </article>
-
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                <h4 class="font-semibold">Founder & Strategic Manager — Rafsang Social Network</h4>
-                <div class="text-xs muted sm:text-left">
-                  <div class="latin-text" dir="ltr">
+            </li>
+            <li class="py-3">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                <h4 class="font-semibold latin-text text-right" lang="en" dir="ltr">Founder & Strategic Manager — Rafsang Social Network</h4>
+                <div class="text-xs muted sm:text-left sm:shrink-0">
+                  <div class="latin-text" lang="en" dir="ltr">
                     <time datetime="2011-10">October 2011</time> - <time datetime="2015-08">August 2015</time>
                   </div>
                   <div>مهر ۱۳۹۰ - مرداد ۱۳۹۴</div>
@@ -1000,13 +975,12 @@
                 بنیان‌گذار و مدیر استراتژیک شبکه اجتماعی Rafsang؛ مدیریت رشد پلتفرم، توسعه با
                 <span class="latin-text">PHP</span>، مدیریت دیتابیس، توسعه فرانت‌اند، تبلیغات و رهبری تیم محتوایی و فنی.
               </p>
-            </article>
-
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                <h4 class="font-semibold">Technical Director & Blogger Community Lead — PW Arzeshi</h4>
-                <div class="text-xs muted sm:text-left">
-                  <div class="latin-text" dir="ltr">
+            </li>
+            <li class="py-3">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                <h4 class="font-semibold latin-text text-right" lang="en" dir="ltr">Technical Director & Blogger Community Lead — PW Arzeshi</h4>
+                <div class="text-xs muted sm:text-left sm:shrink-0">
+                  <div class="latin-text" lang="en" dir="ltr">
                     <time datetime="2010-10">October 2010</time> - <time datetime="2013-03">March 2013</time>
                   </div>
                   <div>مهر ۱۳۸۹ - اسفند ۱۳۹۱</div>
@@ -1018,13 +992,12 @@
                 <span class="latin-text">PHP</span> و
                 <span class="latin-text">JavaScript</span>.
               </p>
-            </article>
-
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                <h4 class="font-semibold">Administrator & Lead Game Translator — IrEdit.ir</h4>
-                <div class="text-xs muted sm:text-left">
-                  <div class="latin-text" dir="ltr">
+            </li>
+            <li class="py-3">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                <h4 class="font-semibold latin-text text-right" lang="en" dir="ltr">Administrator & Lead Game Translator — IrEdit.ir</h4>
+                <div class="text-xs muted sm:text-left sm:shrink-0">
+                  <div class="latin-text" lang="en" dir="ltr">
                     <time datetime="2006-08">August 2006</time> - <time datetime="2010-08">August 2010</time>
                   </div>
                   <div>مرداد ۱۳۸۵ - مرداد ۱۳۸۹</div>
@@ -1034,33 +1007,32 @@
                 مدیریت وب‌سایت و رهبری تیم ترجمه و ویرایش بازی، به‌ویژه فارسی‌سازی PES و انجام بهبودهای گرافیکی و
                 محتوایی.
               </p>
-            </article>
-
-          </div>
+            </li>
+          </ol>
         </section>
 
         <!-- Education + Skills -->
         <section aria-labelledby="education-skills-heading" class="space-y-4">
-          <h3 id="education-skills-heading" class="text-base font-semibold">تحصیلات، مهارت‌ها و زبان‌ها</h3>
+          <h3 id="education-skills-heading" class="text-base font-semibold" tabindex="-1">تحصیلات، مهارت‌ها و زبان‌ها</h3>
 
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <article>
               <h4 class="font-semibold mb-2">تحصیلات</h4>
               <ul class="space-y-2 muted" role="list">
                 <li>
                   <span class="font-medium text-[color:var(--text)]">کارشناسی ارشد سیستم‌های هوشمند</span><br>
-                  <span class="latin-text text-xs" dir="ltr">Vali-e-Asr University · 2017 - 2020</span><br>
+                  <bdi class="latin-text text-xs" lang="en" dir="ltr">Vali-e-Asr University · 2017 - 2020</bdi><br>
                   <span class="text-xs">دانشگاه ولی‌عصر رفسنجان · ۱۳۹۶ - ۱۳۹۹</span>
                 </li>
                 <li>
                   <span class="font-medium text-[color:var(--text)]">کارشناسی علوم کامپیوتر</span><br>
-                  <span class="latin-text text-xs" dir="ltr">Vali-e-Asr University · 2012 - 2017</span><br>
+                  <bdi class="latin-text text-xs" lang="en" dir="ltr">Vali-e-Asr University · 2012 - 2017</bdi><br>
                   <span class="text-xs">دانشگاه ولی‌عصر رفسنجان · ۱۳۹۱ - ۱۳۹۶</span>
                 </li>
               </ul>
             </article>
 
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
+            <article>
               <h4 class="font-semibold mb-2">مهارت‌های اصلی</h4>
               <div class="flex flex-wrap gap-2">
                 <span class="px-2.5 py-1 rounded-full text-xs bg-[color:var(--chip-bg)] latin-text">Laravel</span>
@@ -1076,7 +1048,7 @@
               </div>
             </article>
 
-            <article class="border rounded-xl p-4 border-[color:var(--border)]">
+            <article>
               <h4 class="font-semibold mb-2">زبان‌ها</h4>
               <ul class="space-y-2 muted" role="list">
                 <li>
@@ -1118,9 +1090,9 @@
         </section>
 
         <!-- English intro -->
-        <section aria-label="English intro" lang="en" dir="ltr"
+        <section aria-labelledby="english-heading" lang="en" dir="ltr"
           class="latin-text page-card border rounded-2xl p-5 sm:p-6 space-y-3 text-sm leading-7 text-left">
-          <h2 class="text-base font-semibold">About Sajad Dehshiri (sajaddp)</h2>
+          <h2 id="english-heading" class="text-lg font-semibold" tabindex="-1">About Sajad Dehshiri (sajaddp)</h2>
 
           <p>
             I work on intelligent systems, AI-powered digital product building, and senior web development —
@@ -1139,7 +1111,7 @@
       <!-- Footer -->
       <footer class="pt-4 border-t divider text-[11px] footer-text flex flex-wrap items-center justify-between gap-2">
         <span>© <span class="latin-text">Sajad Dehshiri</span></span>
-        <nav aria-label="Profile formats" class="flex flex-wrap items-center gap-x-3 gap-y-1 latin-text">
+        <nav aria-label="Profile formats" lang="en" class="footer-formats flex flex-wrap items-center gap-x-3 gap-y-1 latin-text">
           <a href="/" class="underline decoration-dotted underline-offset-2">Canonical profile</a>
           <a href="/index.md" class="underline decoration-dotted underline-offset-2">Markdown profile</a>
           <a href="/llms.txt" class="underline decoration-dotted underline-offset-2">LLM-readable profile</a>

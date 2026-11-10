@@ -72,7 +72,6 @@
 | Bale | `@sajaddehshiri` | <https://ble.ir/sajaddehshiri> |
 | Eitaa | `@roadmap` | <https://eitaa.com/roadmap> |
 | Telegram | `@sajad_dp` | <https://t.me/sajad_dp> |
-| LinkedIn | `/in/sajaddp` | <https://www.linkedin.com/in/sajaddp> |
 | Rubika | `@sajaddp71` | <https://rubika.ir/sajaddp71> |
 | Instagram | `@sajaddp` | <https://www.instagram.com/sajaddp/> |
 
@@ -80,7 +79,7 @@
 
 | پلتفرم | شناسه | لینک رسمی |
 |---|---|---|
-| YouTube | `@sajaddehshiri` | <https://www.youtube.com/@sajaddehshiri?sub_confirmation=1> |
+| YouTube | `@sajaddehshiri` | <https://www.youtube.com/@sajaddehshiri> |
 | Aparat | `/roadmap1` | <https://www.aparat.com/roadmap1> |
 
 ### حضور حرفه‌ای
@@ -88,6 +87,7 @@
 | پلتفرم | شناسه | لینک رسمی |
 |---|---|---|
 | GitHub | `@sajaddp` | <https://github.com/sajaddp> |
+| LinkedIn | `/in/sajaddp` | <https://www.linkedin.com/in/sajaddp> |
 
 ---
 
